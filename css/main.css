@@ -40,8 +40,8 @@ body{
     --tbackgrounds: rgba(24, 24, 24, 0.829);
     --principalTitles: rgb(0, 244, 242);
     --tprincipalTitles: rgba(0, 244, 242, 0.733);
-    --inputs: rgb(167, 170, 245);
-    --tinputs: rgb(167, 170, 245,0.733);
+    --labels: rgb(167, 170, 245);
+    --tlabels: rgb(167, 170, 245,0.733);
     --secondaryTitles: rgb(100, 235, 158);
     --tsecondaryTitles: rgb(100, 235, 158,0.733);
     --buttons:rgb(180, 182, 187);
