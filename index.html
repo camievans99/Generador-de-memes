@@ -49,9 +49,9 @@
               <!------------Start of keypad ------------>
             <section class="keypad" id="keypad">
                 <button class="P-menu-button" id="imageButton" aria-label="Este es un boton para abrir el menu de configuraciones de imagen de nuestro meme"><i class="fas fa-images" aria-hidden="true"></i> IMAGEN </button>
-                <button class="P-menu-button" id="textButton"aria-label="Este es un boton para abrir el menu de configuraciones de texto de nuestro meme"><i class="fas fa-font" ></i> TEXTO</button>
-                <button class="P-menu-button" id="lightButton" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp"><i class="fas fa-lightbulb"></i> MODO CLARO </button>
-                <button class="P-menu-button" id="darkButton" style="display: none;" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp" ><i class="far fa-lightbulb"></i> MODO OSCURO  </button>
+                <button class="P-menu-button" id="textButton"aria-label="Este es un boton para abrir el menu de configuraciones de texto de nuestro meme"><i class="fas fa-font" aria-hidden="true"></i> TEXTO</button>
+                <button class="P-menu-button" id="lightButton" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp"><i class="fas fa-lightbulb" aria-hidden="true"></i> MODO CLARO </button>
+                <button class="P-menu-button" id="darkButton" style="display: none;" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp" ><i class="far fa-lightbulb" aria-hidden="true"></i> MODO OSCURO  </button>
             </section>
             <!------------ End of keypad ------------>
         </header>
@@ -70,16 +70,16 @@
 
         <!-------------------------------------------------------------- Start of the image menu-------------------------------------------------------------->
         <aside class="aside-menu" id="imageMenu"> 
-            <form action="img-form" id="imageForm">
-                <h2 class="main-aside-title" id="asideTitle"> •I M A G E N• </h2>
+            <form action="form" id="imageForm">
+                <h2 class="main-aside-title" id="asideTitle" > •IMAGEN• </h2>
             </form>
         </aside>
         <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->
 
          <!-------------------------------------------------------------- Start of the text menu-------------------------------------------------------------->
-         <aside class="aside-menu" id="textMenu"> 
-            <form action="text-form" id="textForm">
-                <h2 class="main-aside-title" id="asideTitle"> •T E X T O• </h2>
+         <aside class="aside-menu" id="textMenu" style="display: none;"> 
+            <form action="form" id="textForm">
+                <h2 class="main-aside-title" id="asideTitle"> •TEXTO• </h2>
             </form>
         </aside>
         <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->

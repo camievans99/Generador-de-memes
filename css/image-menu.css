@@ -1,0 +1,24 @@
+
+/*************************************************************** START OF GENERAL STYLES FOR BOTH ASIDES ******************************************************************************/
+
+.aside-menu{
+    top: 0;
+    right: 0;
+    position: fixed;
+    float: right;
+    height: 100vh;
+    background-color: var(--backgrounds);
+    width: 20vw;
+    padding: 1rem ;
+    font-family: pastika-demo;
+}
+
+
+.main-aside-title{
+    color: var(--secondaryTitles);
+    font-size: 3em;
+    text-align: center;
+
+}
+
+/*************************************************************** END OF GENERAL STYLES FOR BOTH ASIDES ******************************************************************************/

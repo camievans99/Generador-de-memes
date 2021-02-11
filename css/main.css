@@ -46,10 +46,10 @@ body{
     --tsecondaryTitles: rgb(100, 235, 158,0.733);
     --buttons:rgb(180, 182, 187);
     --tbuttons:rgb(180, 182, 187,0.733);
-    --inputs1:rgb(244, 145, 198);
-    --tinputs1:rgb(244, 145, 198,0.733);
-    --inputs2:rgb(245, 180, 108);
-    --tinputs2:rgb(245, 180, 108,0.733);
+    --inputs2:rgb(244, 145, 198);
+    --tinputs2:rgb(244, 145, 198,0.733);
+    --inputs3:rgb(245, 180, 108);
+    --tinputs3:rgb(245, 180, 108,0.733);
     --backgroundImage: url(../assets/images/dark-mode-background.png);
     
 }
