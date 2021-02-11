@@ -65,7 +65,7 @@
 
 .P-menu-button:hover{
     transition: 1s;
-    color: var(--principalTitles);
+    color: var(--secondaryTitles);
     background-color: var(--backgrounds);
     border: 1px solid var(--buttons);
 
@@ -77,6 +77,9 @@
 
 /*************************************************************** start of responsiveness ******************************************************************************/
 
+
+
+/****************************************** SMALL DEVICES **********************************/ 
 @media (min-width: 320px) and (max-width: 476px) {
     .principal-title {
         text-align: center;
@@ -105,6 +108,9 @@
     }
  }
 
+
+ /****************************************** MEDIUM DEVICES  **********************************/ 
+
  @media (min-width: 720px) and (max-width: 1024px){
     .principal-title{
         text-align: center;
@@ -124,7 +130,7 @@
         border: none;
         border-radius: .7rem;
         padding: .5rem 1rem;
-        margin: .2rem .4rem;
+        margin: .1rem .4rem;
         cursor: pointer;
     }
     

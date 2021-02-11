@@ -48,15 +48,20 @@
             
               <!------------Start of keypad ------------>
             <section class="keypad" id="keypad">
-                <button class="P-menu-button" id="imageButton"><i class="fas fa-images"></i> IMAGEN </button>
-                <button class="P-menu-button" id="textButton"><i class="fas fa-font"></i> TEXTO</button>
-                <button class="P-menu-button" id="lightButton"><i class="fas fa-lightbulb"></i> MODO CLARO </button>
-                <button class="P-menu-button" id="darkButton" style="display: none;"><i class="far fa-lightbulb"></i> MODO OSCURO  </button>
+                <button class="P-menu-button" id="imageButton" aria-label="Este es un boton para abrir el menu de configuraciones de imagen de nuestro meme"><i class="fas fa-images" aria-hidden="true"></i> IMAGEN </button>
+                <button class="P-menu-button" id="textButton"><i class="fas fa-font" aria-label="Este es un boton para abrir el menu de configuraciones de texto de nuestro meme"></i> TEXTO</button>
+                <button class="P-menu-button" id="lightButton" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp"><i class="fas fa-lightbulb"></i> MODO CLARO </button>
+                <button class="P-menu-button" id="darkButton" style="display: none;" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp" ><i class="far fa-lightbulb"></i> MODO OSCURO  </button>
             </section>
             <!------------ End of keypad ------------>
         </header>
         <!-------------------------------------------------------------- End of header menu-------------------------------------------------------------->
 
+        <section class="canvas-container">
+            <article class="text-part" id="topText" aria-label="En esta parte se lee el texto superior de nuestro meme">TOP TEXT</article>
+            <article class="image-part" id="imgPart" aria-label="En esta parte se encontrara la imagen que elijamos para armar nuestro meme"></article>
+            <article class="text-part" id="bottomText" aria-label="En esta parte se lee el texto inferior de nuestro meme">BOTTOM TEXT</article>
+        </section>
     </main>
     <!-------------------------------------------------------------- End of main container -------------------------------------------------------------->
     
