@@ -1,3 +1,16 @@
 .text-title{
     font-size: 1em;
 }
+
+.text-area{
+    width: 100%;
+    color: var(--backgrounds);
+    background-color: var(--inputs3);
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    font-family: pastika-demo;
+    font-weight: bolder;
+    margin-top: .7rem;
+    border-radius: .3rem;
+}
