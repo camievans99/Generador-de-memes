@@ -46,6 +46,12 @@
 
 }
 
+.form-title{
+    font-size: 1em;
+    font-weight: normal;
+    margin: .5rem 0rem;
+}
+
 
 
 /*************************************************************************************************************************************************************************************/
@@ -163,7 +169,7 @@
   }
 
 /***********************************************************************/
-/********************* VARIAATIONS FOR MOZILLA ***********************/
+/********************* VARIATIONS FOR MOZILLA ***********************/
 /***********************************************************************/
 
 
@@ -186,4 +192,23 @@
   }
   
 
+  .reset-button{
+      background-color: var(--tbuttons);
+      color: var(--backgrounds);
+      font-size: .7em;
+      text-align: center;
+      border: none;
+      border-radius: .4rem;
+      padding: .4rem;  
+      font-family: pastika-demo;
+      cursor: pointer;
+}
+
+.reset-button:hover{
+    border:  1px solid var(--buttons);
+    color: var(--secondaryTitles);
+    background-color: var(--backgrounds);
+    transition: 1.5s;
+    
+}
     
