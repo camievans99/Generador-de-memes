@@ -91,55 +91,58 @@
                         <option value="multiply">MULTIPLICAR</option>
                     </select>
                 </section>
-                <section class="filter-section" id="filterSection">
-                    <h4 class="form-title"> FILTROS</h4>
-                    <article class="filter-controler" id="filter">
-                        <label for="brightness" class="filter-title" id="filterTitle">BRILLO</label>
-                        <br>
-                        <input class="range-input" type="range" name="brightness" id="brightnessFilter" min="0" max="1" value="1" step="0.1">
-                    </article>
-                    <article class="filter-controler" id="filter">
-                        <label for="opacity" class="filter-title" id="filterTitle">OPACIDAD</label>
-                        <br>
-                        <input class="range-input" type="range" name="opacity" id="opacityFilter" min="0" max="1" value="1" step="0.1">
-                    </article>
-                    <article class="filter-controler" id="filter">
-                        <label for="contrast" class="filter-title" id="filterTitle" >CONTRASTE</label>
-                        <br>
-                        <input class="range-input" type="range" name="contrast" id="contrastFilter" min="100" max="1000" value="100">
-                    </article>
-                    <article class="filter-controler" id="filter">
-                        <label for="blur" class="filter-title" id="filterTitle">DESENFOQUE</label>
-                        <br>
-                        <input class="range-input" type="range" name="blurFilter" id="blur" min="0" max="10" value="0" step="0.1">
-                    </article>
-                    <article class="filter-controler " id="filter">
-                        <label for="gray-scale" class="filter-title" id="filterTitle">ESCALA DE GRISES</label>
-                        <br>
-                        <input class="range-input" type="range" name="gray-scale" id="grayScaleFilter" min="0" max="100" value="0">
-                    </article>
-                    <article class="filter-controler " id="filter">
-                        <label for="sepia" class="filter-title" id="filterTitle">SEPIA</label>
-                        <br>
-                        <input class="range-input" type="range" name="sepia" id="sepiaFilter" min="0" max="100" value="0">
-                    </article>
-                    <article class="filter-controler" id="filter">
-                        <label for="hue" class="filter-title" id="filterTitle">HUE</label>
-                        <br>
-                        <input class="range-input" type="range" name="hue" id="hueFilter" min="0" max="360" value="0">
-                    </article>
-                    <article class="filter-controler" id="filter">
-                        <label for="saturation" class="filter-title" id="filterTitle">SATURADO</label>
-                        <br>
-                        <input class="range-input" type="range" name="saturation" id="saturationFilter" min="100" max="1000" value="100" step="10">
-
-                    </article>
-                    <article class="filter-controler" id="filter">
-                        <label for="negative" class="filter-title" id="filterTitle">NEGATIVO</label>
-                        <br>
-                        <input class="range-input" type="range" name="negative" id="negativeFilter" min="0" max="1" value="0" step="0.1">
-                    </article>
-                
+               
+                <section class="filters-container" id="filtersContainer">
+                    <h3 class="form-title">FILTROS </h3>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="brightness" class="filter-title" >BRILLO</label>
+                            <br>
+                            <input class="range-input" type="range" name="brightness" id="brightness" min="0" max="1" value="1" step="0.1">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="opacidad" class="filter-title">OPACIDAD</label>
+                            <br>
+                            <input class="range-input" type="range" name="opacidad" id="opacity" min="0" max="1" value="1" step="0.1">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="contraste" class="filter-title">CONTRASTE</label>
+                            <br>
+                            <input class="range-input" type="range" name="contraste" id="contrast" min="100" max="1000" value="100">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label  for="desenfoque" class="filter-title">DESENFOQUE</label>
+                            <br>
+                            <input  class="range-input" type="range" name="desenfoque" id="blur" min="0" max="10" value="0" step="0.1">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="escala-de-grises" class="filter-title">ESCALA DE GRISES</label>
+                            <br>
+                            <input class="range-input" type="range" name="escala-de-grises" id="grayScale" min="0" max="100" value="0">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="sepia" class="filter-title">SEPIA</label>
+                            <br>
+                            <input class="range-input" type="range" name="sepia" id="sepia" min="0" max="100" value="0">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="hue" class="filter-title">HUE</label>
+                            <br>
+                            <input class="range-input" type="range" name="hue" id="hue" min="0" max="360" value="0">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="saturado" class="filter-title">SATURADO</label>
+                            <br>
+                            <input class="range-input" type="range" name="saturado" id="satured" min="100" max="1000" value="100" step="10">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="negativo" class="filter-title">NEGATIVO</label>
+                            <br>
+                            <input class="range-input" type="range" name="negativo" id="negative" min="0" max="1" value="0" step="0.1">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <button type="button" id="reset-btn">Reestablecer filtros</button>
+                        </article>
+                    
                 </section>
             </form>
         </aside>

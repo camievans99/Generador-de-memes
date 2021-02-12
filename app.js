@@ -27,6 +27,15 @@ const url = document.getElementById('url') /// url input
 const colorForImage = document.getElementById('colorImage') // Input color that changes the color of the image
 const valueOfColor = document.getElementById('colorValue') //Span that says the user wich color it´s using in HEX
 const imageOptions = document.getElementById('colorImageOptions') // select input that changes the ways the color of the image will act
+const brightnessFilter = document.getElementById('brightness'); // Brightness input range
+const opacityFilter = document.getElementById('opacity');// opacity input range
+const contrastFilter = document.getElementById('contrast');// contrast input range
+const blurFilter = document.getElementById('blur');// blur input range
+const grayScaleFilter = document.getElementById('grayScale');// grayScale input range
+const sepiaaFilter = document.getElementById('sepia');// sepia input range
+const hueFilter = document.getElementById('hue');// hue input range
+const saturedFilter = document.getElementById('satured');// satured input range
+const negativeFilter= document.getElementById('negative');// negative input range
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -126,8 +135,31 @@ imageOptions.addEventListener('change', (e) => {
 
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE FILTERS WORK ////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+const filter = () => {
+    meme.style.filter = `brightness(${brightnessFilter.value}) opacity(${opacityFilter.value}) contrast(${contrastFilter.value}%) blur(${blurFilter.value}px) grayscale(${grayScaleFilter.value}%) sepia(${sepiaaFilter.value}%) hue-rotate(${hueFilter.value}deg) saturate(${saturedFilter.value}%) invert(${negativeFilter.value})`;
+};
 
+brightnessFilter.addEventListener('change', filter);
+
+opacityFilter.addEventListener('change', filter);
+
+contrastFilter.addEventListener('change', filter);
+
+blurFilter.addEventListener('change', filter);
+
+grayScaleFilter.addEventListener('change', filter);
+
+sepiaaFilter.addEventListener('change', filter);
+
+hueFilter.addEventListener('change', filter);
+
+saturedFilter.addEventListener('change', filter);
+
+negativeFilter.addEventListener('change', filter);
 
 
 
