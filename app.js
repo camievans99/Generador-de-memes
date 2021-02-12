@@ -24,6 +24,8 @@ const meme = document.getElementById('imgPart'); //// MEDIO DE MI CANVAS
 
 const asideImage = document.getElementById('imageMenu'); // Menu of image configurations.
 const url = document.getElementById('url') /// url input
+const colorForImage = document.getElementById('colorImage') // Input color that changes the color of the image
+const valueOfColor = document.getElementById('colorValue') //Span that says the user wich color it´s using in HEX
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -82,4 +84,16 @@ url.addEventListener('keyup', (e) => {
     meme.style.backgroundRepeat = "no-repeat";
     meme.style.backgroundSize= "cover";
     
+});
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE BACKGROUND COLOR IMAGE CHANGE  ///////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+colorForImage.addEventListener('input', (e) => {
+    meme.style.backgroundColor = `${e.target.value}`;
+    valueOfColor.innerText = `${e.target.value}`;
 });
