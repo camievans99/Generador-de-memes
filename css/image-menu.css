@@ -57,3 +57,14 @@
     color: var(--backgrounds);
 }
 
+
+.color-image-options{
+    background-color: var(--tinputs2);
+    height: 2.4rem;
+    padding: .3rem;
+    border-radius: .3rem;
+    border: none;
+    font-family: pastika-demo;
+    font-size: .6em;
+
+}
