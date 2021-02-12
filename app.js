@@ -36,6 +36,7 @@ const sepiaaFilter = document.getElementById('sepia');// sepia input range
 const hueFilter = document.getElementById('hue');// hue input range
 const saturedFilter = document.getElementById('satured');// satured input range
 const negativeFilter= document.getElementById('negative');// negative input range
+const resetButton = document.getElementById ('resetButton')
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -163,3 +164,20 @@ negativeFilter.addEventListener('change', filter);
 
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE RESET FILTERS BUTTON WORK ////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+resetButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    brightnessFilter.value = 1;
+    opacityFilter.value = 1;
+    contrastFilter.value = 100;
+    blurFilter.value = 0;
+    grayScaleFilter.value = 0;
+    sepiaaFilter.value = 0;
+    hueFilter.value = 0;
+    saturedFilter.value = 100;
+    negativeFilter.value = 0;
+    filter();
+});
