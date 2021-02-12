@@ -123,3 +123,11 @@ imageOptions.addEventListener('change', (e) => {
         meme.style.backgroundBlendMode = 'normal';
     }
 });
+
+
+
+
+
+
+
+
