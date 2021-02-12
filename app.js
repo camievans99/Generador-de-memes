@@ -26,6 +26,7 @@ const asideImage = document.getElementById('imageMenu'); // Menu of image config
 const url = document.getElementById('url') /// url input
 const colorForImage = document.getElementById('colorImage') // Input color that changes the color of the image
 const valueOfColor = document.getElementById('colorValue') //Span that says the user wich color it´s using in HEX
+const imageOptions = document.getElementById('colorImageOptions') // select input that changes the ways the color of the image will act
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -96,4 +97,29 @@ url.addEventListener('keyup', (e) => {
 colorForImage.addEventListener('input', (e) => {
     meme.style.backgroundColor = `${e.target.value}`;
     valueOfColor.innerText = `${e.target.value}`;
+});
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE SELECT INPUT THAT MAKE THE COLOR IMAGE DARKER OR ANYTHING THE USER WANTS WORK ///
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+imageOptions.addEventListener('change', (e) => {
+    const valor = e.target.value;
+    if (valor === 'lighten') {
+        meme.style.backgroundBlendMode = 'lighten';
+    } else if (valor === 'darken') {
+        meme.style.backgroundBlendMode = 'darken';
+    } else if (valor === 'difference') {
+        meme.style.backgroundBlendMode = 'difference';
+    } else if (valor === 'luminosity') {
+        meme.style.backgroundBlendMode = 'luminosity';
+    } else if (valor === 'multiply') {
+        meme.style.backgroundBlendMode = 'multiply';
+    } else {
+        meme.style.backgroundBlendMode = 'normal';
+    }
 });
