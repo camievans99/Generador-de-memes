@@ -55,6 +55,11 @@ const fontSize = document.getElementById('fontSize'); //Input to change the size
 const alignLeft= document.getElementById('alignLeft');// button that align the text to the left
 const alignCenter=document.getElementById('alignCenter');// center the text of the meme
 const alignRight= document.getElementById('alignRight') //Button that aligns text to the right
+const fontColor =document.getElementById('fontColor')// Input to change the color of the text 
+const fontColorValue= document.getElementById('fontColorValue') // Name of the text color
+const textBackColor =document.getElementById('backFontColor')// Input to change the text part of the meme
+const backColorValue = document.getElementById('backColorValue') // Name of the background color
+
 
 
 
@@ -323,3 +328,18 @@ alignRight.addEventListener('click', () => {
     memeTopText.style.textAlign= 'right'
     memeBottomText.style.textAlign='right'
 })
+
+
+
+
+fontColor.addEventListener('input', (e) => {
+    memeTopText.style.color = e.target.value;
+    memeBottomText.style.color = e.target.value;
+    fontColorValue.innerText = `${e.target.value}`;
+});
+
+textBackColor.addEventListener('input', (e) => {
+    memeTopText.style.backgroundColor = e.target.value;
+    memeBottomText.style.backgroundColor = e.target.value;
+    backColorValue.innerText = `${e.target.value}`;
+});
