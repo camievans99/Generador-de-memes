@@ -51,6 +51,7 @@ const eraseTopText = document.getElementById('eraseTopText');// input that erase
 const BottomtextArea= document.getElementById('bottomAreatext');// textarea for the bottom part of the meme
 const eraseBottomText = document.getElementById('eraseBottomText'); // input that erase the bottom text part of the meme
 const fontSelection = document.getElementById ('fontSelector'); // select tag tha allows to change the font selection
+const fontSize = document.getElementById('fontSize'); //Input to change the size of the meme fonts
 
 
 
@@ -274,3 +275,13 @@ fontSelection.addEventListener('change', (e) => {
         memeBottomText.style.fontFamily = `pastika-demo`;
     }
 });
+
+
+
+fontSize.addEventListener('change', (e) => {
+    memeTopText.style.fontSize = `${e.target.value}px`;
+    memeBottomText.style.fontSize = `${e.target.value}px`;
+});
+
+
+
