@@ -69,7 +69,7 @@
         <!-------------------------------------------------------------- End of the CANVAS-------------------------------------------------------------->
 
         <!-------------------------------------------------------------- Start of the image menu-------------------------------------------------------------->
-        <aside class="aside-menu" id="imageMenu"> 
+        <aside class="aside-menu" id="imageMenu" style="display: none;"> 
 
             <!------------ Title------------>
             <h2 class="main-aside-title" id="asideTitle" > • IMAGEN • </h2>
@@ -157,15 +157,17 @@
         <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->
 
          <!-------------------------------------------------------------- Start of the text menu-------------------------------------------------------------->
-         <aside class="aside-menu" id="textMenu" style="display: none;"> 
+         <aside class="aside-menu" id="textMenu" > 
             <form action="form" id="textForm" class="form">
                 <h2 class="main-aside-title" id="asideTitle"> • TEXTO • </h2>
                 <section class="text-container">
                     <h3 class="text-title"> SUPERIOR </h3>
                     <textarea name="area-text" id="topAreatext" class="text-area" placeholder="TOP TEXT" aria-label="Aqui puedes escribir lo que quieres que vaya en la parte de arriba de tu meme "></textarea>
-                    <input type="checkbox" name="top-text" id="noTopText" class="checkbox">
+                    <input type="checkbox" name="top-text" id="eraseTopText" class="checkbox">
                     <label for="top-text" class="text-subtitle">Sin texto superior</label>
                 </section>
+                
+
             </form>
         </aside>
         <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->
