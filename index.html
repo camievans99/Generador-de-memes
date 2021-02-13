@@ -159,31 +159,38 @@
          <!-------------------------------------------------------------- Start of the text menu-------------------------------------------------------------->
          <aside class="aside-menu" id="textMenu" > 
             <form action="form" id="textForm" class="form">
+
+                 <!------------ title ------------>
                 <h2 class="main-aside-title" id="asideTitle"> • TEXTO • </h2>
+                
+                <!------------ top text part------------>
                 <section class="text-container">
                     <h3 class="text-title"> SUPERIOR </h3>
                     <textarea name="area-text" id="topAreatext" class="text-area" placeholder="TOP TEXT" aria-label="Aqui puedes escribir lo que quieres que vaya en la parte de arriba de tu meme "></textarea>
                     <input type="checkbox" name="top-text" id="eraseTopText" class="checkbox">
                     <label for="top-text" class="text-subtitle">Sin texto superior</label>
                 </section>
+
+                <!------------ bottom text part------------>
                 <section class="text-container">
                     <h3 class="text-title"> INFERIOR </h3>
                     <textarea name="area-text" id="bottomAreatext" class="text-area" placeholder="BOTTOM TEXT" aria-label="Aqui puedes escribir lo que quieres que vaya en la parte de arriba de tu meme "></textarea>
                     <input type="checkbox" name="bottom-text" id="eraseBottomText" class="checkbox">
                     <label for="bottom-text" class="text-subtitle">Sin texto inferior </label>
                 </section>
+
+                <!------------ fonts part------------>
                 <section class="text-container">
                     <h3 class="text-title"> FUENTES </h3>
-                    <select name="font" id="fontSelection">
-                        <option value="arial" class="arial">Arial</option>
-                        <option value="arial-black" class="arial-black">Arial Black</option>
-                        <option value="american-typewriter" class="american-typewriter">American Typewriter</option>
-                        <option value="andale-mono" class="andale-mono">Andale Mono</option>
-                        <option value="comic-sans-ms" class="comic-sans">Comic Sans MS</option>
-                        <option value="helvetica" class="helvetica">Helvetica</option>
-                        <option value="impact" selected class="impact">Impact</option>
-                        <option value="verdana" class="verdana">Verdana</option>
-                        <option value="times-new-roman" class="times-new-roman">Times New Roman</option>
+                    <select name="font" id="fontSelector" class="font-selection">
+                        <option value="bella-years" class="bella-years">Bella years</option>
+                        <option value="cosmith-sans" class="cosmith-sans">cosmith sans</option>
+                        <option value="how-dare-you" class="how-dare-you">How dare you</option>
+                        <option value="pastika-demo" selected class="pastika-demo">Pastika demo</option>
+                        <option value="macho-weaak" class="macho-weaak">Macho weak</option>
+                        <option value="mellow-yellow"  class="mellow-yellow">Mellow yellow</option>
+                        <option value="murky" class="murky">Murky</option>
+                        <option value="sweet-cherry"  class="Sweet-cherry">Sweet cherry</option>
                     </select>
                 </section>
 

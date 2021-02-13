@@ -50,6 +50,7 @@ const topTextArea = document.getElementById('topAreatext'); // textarea for the 
 const eraseTopText = document.getElementById('eraseTopText');// input that erase the top text part of the meme
 const BottomtextArea= document.getElementById('bottomAreatext');// textarea for the bottom part of the meme
 const eraseBottomText = document.getElementById('eraseBottomText'); // input that erase the bottom text part of the meme
+const fontSelection = document.getElementById ('fontSelector'); // select tag tha allows to change the font selection
 
 
 
@@ -233,5 +234,41 @@ eraseBottomText.addEventListener('change',()=> {
         memeBottomText.style.display= 'none'
     } else {
         memeBottomText.style.display= 'block'
+    }
+});
+
+
+
+
+fontSelection.addEventListener('change', (e) => {
+    const valorFuente = e.target.value;
+    if (valorFuente === 'bella-years') {
+        memeTopText.style.fontFamily = `bella-years`;
+        memeBottomText.style.fontFamily = `bella-years`;
+    } else if (valorFuente === 'cosmith-sans') {
+        memeTopText.style.fontFamily = `cosmith-sans`;
+        memeBottomText.style.fontFamily = `cosmith-sans`;
+    } else if (valorFuente === 'how-dare-you') {
+        memeTopText.style.fontFamily = `how-dare-you`;
+        memeBottomText.style.fontFamily = `how-dare-you`;
+    } else if (valorFuente === 'pastika-demo') {
+        memeTopText.style.fontFamily = `pastika-demo`;
+        memeBottomText.style.fontFamily = `pastika-demo`;
+    } else if (valorFuente === 'macho-weaak') {
+        memeTopText.style.fontFamily = `macho-weak`;
+        memeBottomText.style.fontFamily = `macho-weak`;
+    } else if (valorFuente === 'mellow-yellow') {
+        memeTopText.style.fontFamily = `mellow-yellow`;
+        memeBottomText.style.fontFamily = `mellow-yellow`;
+    } else if (valorFuente === 'murky') {
+        memeTopText.style.fontFamily = `murky`;
+        memeBottomText.style.fontFamily = `murky`;
+    } else if(valorFuente=== 'sweet-cherry'){
+        memeTopText.style.fontFamily='sweet-chery'
+        memeBottomText.style.fontFamily='sweet-chery'
+    }
+      else {
+        memeTopText.style.fontFamily = `pastika-demo`;
+        memeBottomText.style.fontFamily = `pastika-demo`;
     }
 });
