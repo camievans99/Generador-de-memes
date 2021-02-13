@@ -102,7 +102,9 @@
     text-align: center;
 }
 
-
+/***********************************************************************/
+/********************* STYLES FOR THE TEXT ALIGN ************************/
+/***********************************************************************/
 
 .fa-align-left,
 .fa-align-center,
@@ -126,3 +128,28 @@
     background-color: var(--tinputs2);
     transition: 1s;
 }
+
+
+/***********************************************************************/
+/********************* STYLES FOR THE COLOR OF THE TEXT ***************/
+/***********************************************************************/
+
+.row-color-container2{
+    background-color: var(--tinputs3);
+    display: inline-flex;
+    padding: .4rem;
+    border-radius: .3rem;
+    color: var(--backgrounds);
+    justify-content:space-evenly;
+    font-size: .6em;
+    
+}
+
+.titles-color-container{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+
+
+

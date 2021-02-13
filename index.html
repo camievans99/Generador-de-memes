@@ -181,6 +181,8 @@
 
                 <!------------ fonts part------------>
                 <section class="text-container">
+
+                    <!------------ fonts selection------------>
                     <h3 class="text-title"> FUENTES </h3>
                     <select name="font" id="fontSelector" class="font-selection">
                         <option value="bella-years" class="bella-years">Bella years</option>
@@ -193,15 +195,34 @@
                         <option value="sweet-cherry"  class="Sweet-cherry">Sweet cherry</option>
                     </select>
                 </section>
+                <!------------ fonts size----------->
                 <section class="text-container">
                     <input type="number" name="font-size" id="fontSize" class="font-size" value="30" max="80">
+
+                    <!------------ text align ----------->
                     <i class="fas fa-align-left" aria-hidden="true" id="alignLeft"></i>
                     <i class="fas fa-align-center" aria-hidden="true" id="alignCenter"></i>
                     <i class="fas fa-align-right" aria-hidden="true" id="alignRight"></i>
                 </section>
+                    <!------------ text color ------------>
                 <section class="text-container">
-                    <input type="color" value="#CCCCCC">
-                    <span class="color-span"> #CCCCCC </span>
+                    <article class="titles-color-container">
+                        <label for="font-color" class="font-color-title"> COLOR </label> 
+                        <label for="background-color" class="text-title"> FONDO</label>
+
+                    </article>
+                    
+                    <article class="color-container"> 
+                        <div class="row-color-container2">
+                            <input type="color" name="font-color" value="#CCCCCC"> 
+                            <span class="color-span"> #CCCCCC </span> 
+                        </div>
+                        <div class="row-color-container2">
+                            <input type="color" class="background-color" value="#CCCCCC"> 
+                            <span class="color-span"> #CCCCCC </span> 
+                        </div>
+                    </article>  
+                   
 
                 </section>
             </form>
