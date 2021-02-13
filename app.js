@@ -52,7 +52,9 @@ const BottomtextArea= document.getElementById('bottomAreatext');// textarea for 
 const eraseBottomText = document.getElementById('eraseBottomText'); // input that erase the bottom text part of the meme
 const fontSelection = document.getElementById ('fontSelector'); // select tag tha allows to change the font selection
 const fontSize = document.getElementById('fontSize'); //Input to change the size of the meme fonts
-
+const alignLeft= document.getElementById('alignLeft');// button that align the text to the left
+const alignCenter=document.getElementById('alignCenter');// center the text of the meme
+const alignRight= document.getElementById('alignRight') //Button that aligns text to the right
 
 
 
@@ -287,3 +289,37 @@ fontSize.addEventListener('change', (e) => {
 
 
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE TEXTALIGN LEFT WORK////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+alignLeft.addEventListener('click', () => {
+    memeTopText.style.textAlign = 'left';
+    memeBottomText.style.textAlign = 'left';
+});
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE TEXTALIGN CENTER WORK////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+alignCenter.addEventListener('click', () => {
+    memeTopText.style.textAlign='center';
+    memeBottomText.style.textAlign='center'
+})
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE TEXTALIGN RIGHT WORK////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+alignRight.addEventListener('click', () => {
+    memeTopText.style.textAlign= 'right'
+    memeBottomText.style.textAlign='right'
+})

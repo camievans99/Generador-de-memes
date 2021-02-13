@@ -37,7 +37,9 @@
     border-radius: .3rem;
 }
 
-
+/***********************************************************************/
+/********************* STYLES FOR FONT SELECTION************************/
+/***********************************************************************/
 
 .font-selection{
     background-color: var(--tinputs3);
@@ -85,6 +87,10 @@
 }
 
 
+/***********************************************************************/
+/********************* STYLES FOR THE FONT SIZE************************/
+/***********************************************************************/
+
 .font-size{
     width: 40%;
     height: 3rem;
@@ -94,4 +100,29 @@
     font-family: pastika-demo;
     font-size: 1em;
     text-align: center;
+}
+
+
+
+.fa-align-left,
+.fa-align-center,
+.fa-align-right{
+
+    background-color: vaR(--tinputs3);
+    padding: .5rem;
+    color: var(--backgrounds);
+    border-radius: .3rem;
+    text-align: center;
+    width: 18%;
+    margin-top: .7rem;
+    cursor: pointer;
+}
+
+
+.fa-align-left:hover,
+.fa-align-center:hover,
+.fa-align-right:hover{
+
+    background-color: var(--tinputs2);
+    transition: 1s;
 }
