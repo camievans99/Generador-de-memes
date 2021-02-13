@@ -16,19 +16,19 @@ const imageBtn = document.getElementById ('imageButton'); //Button to open the i
 ///////////////////////////////// CANVAS ////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-const memeTopText= document.getElementById('topText') // top text of the canvas
+const memeTopText= document.getElementById('topText'); // top text of the canvas
 const meme = document.getElementById('imgPart'); //// Image part of the canvas
-const memeBottomText= document.getElementById('bottomText') // bottom text of the canvas
+const memeBottomText= document.getElementById('bottomText'); // bottom text of the canvas
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////// IMAGE ASIDE ///////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
 const asideImage = document.getElementById('imageMenu'); // Menu of image configurations.
-const url = document.getElementById('url') /// url input
-const colorForImage = document.getElementById('colorImage') // Input color that changes the color of the image
-const valueOfColor = document.getElementById('colorValue') //Span that says the user wich color it´s using in HEX
-const imageOptions = document.getElementById('colorImageOptions') // select input that changes the ways the color of the image will act
+const url = document.getElementById('url'); /// url input
+const colorForImage = document.getElementById('colorImage'); // Input color that changes the color of the image
+const valueOfColor = document.getElementById('colorValue'); //Span that says the user wich color it´s using in HEX
+const imageOptions = document.getElementById('colorImageOptions');// select input that changes the ways the color of the image will act
 const brightnessFilter = document.getElementById('brightness'); // Brightness input range
 const opacityFilter = document.getElementById('opacity');// opacity input range
 const contrastFilter = document.getElementById('contrast');// contrast input range
@@ -38,7 +38,7 @@ const sepiaaFilter = document.getElementById('sepia');// sepia input range
 const hueFilter = document.getElementById('hue');// hue input range
 const saturedFilter = document.getElementById('satured');// satured input range
 const negativeFilter= document.getElementById('negative');// negative input range
-const resetButton = document.getElementById ('resetButton')
+const resetButton = document.getElementById ('resetButton');// reset filters button
 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -48,6 +48,8 @@ const resetButton = document.getElementById ('resetButton')
 const asideText = document.getElementById('textMenu'); // Menu of text configurations.
 const topTextArea = document.getElementById('topAreatext'); // textarea for the the top part of the meme
 const eraseTopText = document.getElementById('eraseTopText');// input that erase the top text part of the meme
+const BottomtextArea= document.getElementById('bottomAreatext');// textarea for the bottom part of the meme
+const eraseBottomText = document.getElementById('eraseBottomText'); // input that erase the bottom text part of the meme
 
 
 
@@ -189,11 +191,11 @@ resetButton.addEventListener('click', (e) => {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////   MAKING THE TEXTAREA WORK SO THE USER CAN WRITE IN THERE /////////////////////////////////////
+////////////////////   MAKING THE TOP TEXTAREA WORK SO THE USER CAN WRITE IN THERE /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-topTextArea.addEventListener('keyup', (e) => {
+topTextArea.addEventListener('keydown', (e) => {
     memeTopText.innerText = e.target.value;
 });
 
@@ -207,5 +209,29 @@ eraseTopText.addEventListener('change', () => {
         memeTopText.style.display = 'none';
     } else {
         memeTopText.style.display = 'block';
+    }
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE BOTTOM TEXTAREA WORK SO THE USER CAN WRITE IN THERE /////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+BottomtextArea.addEventListener('keydown',(e) => {
+    memeBottomText.innerText= e.target.value;
+});
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE BOTTOM TEXT DISSAPEAR ////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+eraseBottomText.addEventListener('change',()=> {
+    if(eraseBottomText.checked === true){
+        memeBottomText.style.display= 'none'
+    } else {
+        memeBottomText.style.display= 'block'
     }
 });
