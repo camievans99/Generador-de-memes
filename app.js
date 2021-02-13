@@ -238,32 +238,34 @@ eraseBottomText.addEventListener('change',()=> {
 });
 
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE FONT SELECTION WORK ////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 fontSelection.addEventListener('change', (e) => {
-    const valorFuente = e.target.value;
-    if (valorFuente === 'bella-years') {
+    const fontValue = e.target.value;
+    if (fontValue === 'bella-years') {
         memeTopText.style.fontFamily = `bella-years`;
         memeBottomText.style.fontFamily = `bella-years`;
-    } else if (valorFuente === 'cosmith-sans') {
+    } else if (fontValue === 'cosmith-sans') {
         memeTopText.style.fontFamily = `cosmith-sans`;
         memeBottomText.style.fontFamily = `cosmith-sans`;
-    } else if (valorFuente === 'how-dare-you') {
+    } else if (fontValue === 'how-dare-you') {
         memeTopText.style.fontFamily = `how-dare-you`;
         memeBottomText.style.fontFamily = `how-dare-you`;
-    } else if (valorFuente === 'pastika-demo') {
+    } else if (fontValue === 'pastika-demo') {
         memeTopText.style.fontFamily = `pastika-demo`;
         memeBottomText.style.fontFamily = `pastika-demo`;
-    } else if (valorFuente === 'macho-weaak') {
+    } else if (fontValue === 'macho-weaak') {
         memeTopText.style.fontFamily = `macho-weak`;
         memeBottomText.style.fontFamily = `macho-weak`;
-    } else if (valorFuente === 'mellow-yellow') {
+    } else if (fontValue === 'mellow-yellow') {
         memeTopText.style.fontFamily = `mellow-yellow`;
         memeBottomText.style.fontFamily = `mellow-yellow`;
-    } else if (valorFuente === 'murky') {
+    } else if (fontValue === 'murky') {
         memeTopText.style.fontFamily = `murky`;
         memeBottomText.style.fontFamily = `murky`;
-    } else if(valorFuente=== 'sweet-cherry'){
+    } else if(fontValue=== 'sweet-cherry'){
         memeTopText.style.fontFamily='sweet-chery'
         memeBottomText.style.fontFamily='sweet-chery'
     }
