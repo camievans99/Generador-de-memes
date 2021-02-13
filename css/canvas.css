@@ -7,6 +7,10 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    background: rgba( 24, 24, 24, 0.65 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    height: 100%;
     }
 
 /****************************************** END OF GENERAL STYLES FOR THE CANVAS SECTION **********************************/ 
@@ -29,9 +33,7 @@
 /****************************************** STYLES FOR THE IMAGE CONTAINER OF THE  CANVAS SECTION **********************************/ 
 
 .image-part{
-    background: rgba( 24, 24, 24, 0.65 );
-    backdrop-filter: blur( 20.0px );
-    -webkit-backdrop-filter: blur( 20.0px );
+    
     height: 31.3rem;
 }
 

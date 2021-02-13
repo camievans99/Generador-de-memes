@@ -59,7 +59,7 @@ const fontColor =document.getElementById('fontColor')// Input to change the colo
 const fontColorValue= document.getElementById('fontColorValue') // Name of the text color
 const textBackColor =document.getElementById('backFontColor')// Input to change the text part of the meme
 const backColorValue = document.getElementById('backColorValue') // Name of the background color
-
+const transparentBack =document.getElementById('transparentBack') //input for making the background of our text transparent
 
 
 
@@ -330,6 +330,9 @@ alignRight.addEventListener('click', () => {
 })
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE CHANGE OF THE COLOR OF THE FONT WORK////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 fontColor.addEventListener('input', (e) => {
@@ -338,8 +341,32 @@ fontColor.addEventListener('input', (e) => {
     fontColorValue.innerText = `${e.target.value}`;
 });
 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE BACKGROUND COLOR OF THE TEXT WORK////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 textBackColor.addEventListener('input', (e) => {
     memeTopText.style.backgroundColor = e.target.value;
     memeBottomText.style.backgroundColor = e.target.value;
     backColorValue.innerText = `${e.target.value}`;
 });
+
+
+
+
+
+transparentBack.addEventListener('change', () => {
+    if (transparentBack.checked) {
+        memeTopText.style.backgroundColor = 'transparent';
+        memeTopText.style.zIndex='2'
+        memeBottomText.style.backgroundColor = 'transparent';
+        
+    } else {
+        memeTopText.style.backgroundColor = 'black';
+        memeBottomText.style.backgroundColor = 'black';
+    }
+})
+
+
