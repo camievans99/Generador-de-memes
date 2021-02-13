@@ -83,3 +83,15 @@
 .cosmith-sans{
     font-family: cosmith-sans;
 }
+
+
+.font-size{
+    width: 40%;
+    height: 3rem;
+    background-color: var(--tinputs3);
+    border-radius: .3rem;
+    padding: .4rem;
+    font-family: pastika-demo;
+    font-size: 1em;
+    text-align: center;
+}
