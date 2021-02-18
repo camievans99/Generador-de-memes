@@ -156,11 +156,6 @@ text-align: center;
 }
 
 
-.light-mode{
-    background-image: url(../assets/images/light-mode-background.jfif);
-}
-
-
 
 @media (min-width: 320px) and (max-width: 720px){
     .download-btn{
@@ -172,3 +167,6 @@ text-align: center;
         margin-top: .5rem;
     }
 }
+
+
+

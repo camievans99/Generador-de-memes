@@ -12,6 +12,8 @@ const download = document.getElementById ('downloadBtn')
 
 const textBtn  = document.getElementById('textButton'); // Button to open the text configurations menu
 const imageBtn = document.getElementById ('imageButton'); //Button to open the image configurations menu. 
+const lightBtn = document.getElementById('lightButton') //Button for change to light mode
+const darkBtn = document. getElementById ('darkButton') // button for change to dark mode
 
 
 
@@ -451,21 +453,27 @@ download.addEventListener('click', () => {
 })
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE DARKMODE WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const lightBtn = document.getElementById('lightButton')
-const darkBtn = document. getElementById ('darkButton')
 
 
-darkBtn.addEventListener( 'click', ()  => {
-    darkBtn.style.display='none';
-    lightBtn.style.display='inline';
+darkBtn.addEventListener( 'click', (e)  => {
+    if (darkBtn.checked === true){
+        darkBtn.style.display='none';
+        lightBtn.style.display='inline';
+    }
+    
+    
+
     
 })
 
 lightBtn.addEventListener( 'click', ()  => {
     lightBtn.style.display='none';
     darkBtn.style.display='inline';
-    body.classList.toggle=('light-mode')
+    body.classList.toggle=('darkmode')
     
    
     
@@ -473,10 +481,6 @@ lightBtn.addEventListener( 'click', ()  => {
 })
 
 
-const closeAside = document.getElementById('closeAside')
 
 
-closeAside.addEventListener ('click' , () => {
-    asideImage.style.display='none';
-    asideText.style.display='none';
-});
+
