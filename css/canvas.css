@@ -7,9 +7,12 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    background: rgba( 24, 24, 24, 0.65 );
+    background: rgba( 255, 168, 226, 0.50 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 20.0px );
     -webkit-backdrop-filter: blur( 20.0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     height: 21rem;
     margin-top: 1%;
     }
@@ -45,35 +48,48 @@
 /****************************************** START OF RESPONSIVENESS **********************************/ 
 
 
-/****************************************** SMALL AND MEDIUM  DEVICES **********************************/ 
-@media (min-width: 320px) and (max-width: 1024px){
+/****************************************** SMALL  DEVICES **********************************/ 
+@media (min-width: 320px) and (max-width: 425px){
     
 .canvas-container{
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
+    height: 14rem;
     }
 
     .text-part{
         background-color: var(--backgrounds);
-        height: 4rem;
+        height: 2rem;
         color: var(--secondaryTitles);
         font-family: pastika-demo;
-        padding: 1rem;
-        font-size: 2rem;
+        padding: .4rem;
+        font-size: 2¿1rem;
     }
 
     
     .image-part{
-        background-color: var(--tbackgrounds);
-        height: 31.3rem;
+        background-color: transparent;
+        height: 10rem;
     }
 
 
 
 }
 
- 
+ /****************************************** MEDIUM  DEVICES **********************************/
+ @media (min-width: 426px) and (max-width: 720px){
+     .canvas-container{
+        width: 75%;
+     }
+ }
 
+/******************************************LARGE  DEVICES **********************************/
+
+@media (min-width: 721px) and (max-width: 1024px){
+    .canvas-container{
+        width: 65%;
+    }
+}
 /****************************************** END OF RESPONSIVENESS**********************************/ 

@@ -5,10 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body{
     background-image: var(--backgroundImage);
+    height: 120vh;
 }
 
 /****************************************** ADDING FONTS **********************************/
@@ -87,20 +89,86 @@ body{
 /***** DARK MODE COLOR PALETTE **********************************/ 
 
 :root{
-    --backgrounds: rgb(24, 24, 24);
-    --tbackgrounds: rgba(24, 24, 24, 0.829);
-    --principalTitles: rgb(0, 244, 242);
-    --tprincipalTitles: rgba(0, 244, 242, 0.733);
-    --labels: rgb(167, 170, 245);
-    --tlabels: rgb(167, 170, 245,0.733);
-    --secondaryTitles: rgb(100, 235, 158);
-    --tsecondaryTitles: rgb(100, 235, 158,0.733);
-    --buttons:rgb(180, 182, 187);
-    --tbuttons:rgb(180, 182, 187,0.733);
-    --inputs2:rgb(244, 145, 198);
-    --tinputs2:rgb(244, 145, 198,0.733);
-    --inputs3:rgb(245, 180, 108);
-    --tinputs3:rgb(245, 180, 108,0.733);
-    --backgroundImage: url(../assets/images/dark-mode-background.png);
+    --dmbackgrounds: rgb(24, 24, 24);
+    --dmtbackgrounds: rgba(24, 24, 24, 0.829);
+    --dmprincipalTitles: rgb(0, 244, 242);
+    --dmtprincipalTitles: rgba(0, 244, 242, 0.733);
+    --dmlabels: rgb(167, 170, 245);
+    --dmtlabels: rgb(167, 170, 245,0.733);
+    --dmsecondaryTitles: rgb(100, 235, 158);
+    --dmtsecondaryTitles: rgb(100, 235, 158,0.733);
+    --dmbuttons:rgb(180, 182, 187);
+    --dmtbuttons:rgb(180, 182, 187,0.733);
+    --dminputs2:rgb(244, 145, 198);
+    --dmtinputs2:rgb(244, 145, 198,0.733);
+    --dminputs3:rgb(245, 180, 108);
+    --dmtinputs3:rgb(245, 180, 108,0.733);
+    --dmbackgroundImage: url(../assets/images/dark-mode-background.png);
     
+}
+
+:root{
+    --backgrounds: white;
+    --tbackgrounds: white;
+    --principalTitles: #FA26A0;
+    --tprincipalTitles: #fa26a2bd;
+    --labels: #26DFD0;
+    --tlabels: #26DFD0cc;
+    --secondaryTitles: #e965b2;
+    --tsecondaryTitles: #e965b2cc;
+    --buttons:#07BB9C;
+    --tbuttons:#07BB9C;
+    --inputs2:#E56997;
+    --tinputs2:#E56997cc;
+    --inputs3:#BD97CB;
+    --tinputs3:#BD97CBcc;
+    --backgroundImage: url(../assets/images/a4204cea3c7cd959197a514decd54975.jpg);
+    
+}
+
+
+
+.download-btn-container{
+text-align: center;
+}
+
+
+.download-btn{
+    background-color: var(--principalTitles);
+    color: var(--backgrounds);
+    padding: .4rem;
+    font-size: 2em;
+    border: none;
+    border-radius: .4rem;
+    font-family: pastika-demo;
+    margin-top: 5.5rem;
+    cursor: pointer;
+}
+
+.download-btn:hover{
+    margin-top: 4rem;
+    background: #FA26A0;
+    background: -webkit-linear-gradient(to right, #FA26A0 0%, #26DFD0 8%, #E965B2 29%, #07BB9C 50%, #E56997 67%, #BD97CB 100%);
+    background: -moz-linear-gradient(to right, #FA26A0 0%, #26DFD0 8%, #E965B2 29%, #07BB9C 50%, #E56997 67%, #BD97CB 100%);
+    background: linear-gradient(to right, #FA26A0 0%, #26DFD0 8%, #E965B2 29%, #07BB9C 50%, #E56997 67%, #BD97CB 100%);
+    transition: 2s;
+
+}
+
+
+.light-mode{
+    background-image: url(../assets/images/light-mode-background.jfif);
+}
+
+
+
+@media (min-width: 320px) and (max-width: 720px){
+    .download-btn{
+        font-size: 1em;
+        margin-top: 1rem;
+    }
+
+    .download-btn:hover{
+        margin-top: .5rem;
+    }
 }

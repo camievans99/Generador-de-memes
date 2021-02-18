@@ -8,6 +8,10 @@
 /********************* ASIDE MENU**************************************/
 /***********************************************************************/
 
+.fa-times-circle{
+  color: var(--principalTitles);
+  cursor: pointer;
+}
 
 .aside-menu{
     top: 0;
@@ -216,3 +220,21 @@
     
 }
     
+
+@media (min-width: 320px) and (max-width: 1024px){
+  .aside-menu{
+    display: none;
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px){
+  .fa-times-circle{
+    display: none;
+  }
+
+  .close-responsive-aside{
+    display: none;
+  }
+}

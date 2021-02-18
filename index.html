@@ -34,7 +34,7 @@
 
     <title>Generador de memes -by Cami🔮</title>
 </head>
-<body>
+<body id="body">
     <!-------------------------------------------------------------- Start of main container -------------------------------------------------------------->
     
     <main class="main-container" id="mainContainer"> 
@@ -50,8 +50,8 @@
             <section class="keypad" id="keypad">
                 <button class="P-menu-button" id="imageButton" aria-label="Este es un boton para abrir el menu de configuraciones de imagen de nuestro meme"><i class="fas fa-images" aria-hidden="true"></i> IMAGEN </button>
                 <button class="P-menu-button" id="textButton"aria-label="Este es un boton para abrir el menu de configuraciones de texto de nuestro meme"><i class="fas fa-font" aria-hidden="true"></i> TEXTO</button>
-                <button class="P-menu-button" id="lightButton" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp"><i class="fas fa-lightbulb" aria-hidden="true"></i> MODO CLARO </button>
-                <button class="P-menu-button" id="darkButton" style="display: none;" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp" ><i class="far fa-lightbulb" aria-hidden="true"></i> MODO OSCURO  </button>
+                <button class="P-menu-button" id="darkButton" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp"><i class="fas fa-lightbulb" aria-hidden="true"></i> MODO OSCURO </button>
+                <button class="P-menu-button" id="lightButton" style="display: none;" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp" ><i class="far fa-lightbulb" aria-hidden="true"></i> MODO CLARO  </button>
             </section>
             <!------------ End of keypad ------------>
         </header>
@@ -60,16 +60,20 @@
 
          <!-------------------------------------------------------------- Start of the CANVAS-------------------------------------------------------------->
 
-        <section class="canvas-container">
+        <section class="canvas-container" id="canvas">
             <article class="text-part" id="topText" aria-label="En esta parte se lee el texto superior de nuestro meme"> <span> TOP TEXT </span> </article>
             <article class="image-part" id="imgPart" aria-label="En esta parte se encontrara la imagen que elijamos para armar nuestro meme"></article>
             <article class="text-part" id="bottomText" aria-label="En esta parte se lee el texto inferior de nuestro meme"> <span> BOTTOM TEXT</span> </article>
+        </section>
+        <section class="download-btn-container">
+            <button class="download-btn" id="downloadBtn"> Descargar imagen</button>
         </section>
 
         <!-------------------------------------------------------------- End of the CANVAS-------------------------------------------------------------->
 
         <!-------------------------------------------------------------- Start of the image menu-------------------------------------------------------------->
         <aside class="aside-menu" id="imageMenu" style="display: none;"> 
+            <i class="far fa-times-circle" id="closeResponsive"></i>
 
             <!------------ Title------------>
             <h2 class="main-aside-title" id="asideTitle" > • IMAGEN • </h2>
@@ -158,12 +162,11 @@
 
          <!-------------------------------------------------------------- Start of the text menu-------------------------------------------------------------->
          <aside class="aside-menu" id="textMenu" > 
+            <i class="far fa-times-circle" id="closeResponsive"></i>
+            <!------------ title ------------>
+            <h2 class="main-aside-title" id="asideTitle"> • TEXTO • </h2>
             <form action="form" id="textForm" class="form">
-
-                 <!------------ title ------------>
-                <h2 class="main-aside-title" id="asideTitle"> • TEXTO • </h2>
-                
-                <!------------ top text part------------>
+                 <!------------ top text part------------>
                 <section class="text-container">
                     <h3 class="text-title"> SUPERIOR </h3>
                     <textarea name="area-text" id="topAreatext" class="text-area" placeholder="TOP TEXT" aria-label="Aqui puedes escribir lo que quieres que vaya en la parte de arriba de tu meme "></textarea>
@@ -221,7 +224,7 @@
                         </div>
                         <br>
                         <!------------ transparent backgrounds ------------>
-                        <input type="checkbox" id="transparentBack" class="checkbox" >
+                        <input type="checkbox" id="transparentBack" class="checkbox" aria-label="Toque aqui para hacer desaparecer el fondo del texto">
                         <span class="text-subtitle" > Fondo transparente  </span>
                     </article>  
                 </section>
@@ -229,41 +232,47 @@
                 <section class="text-container">
                     <h3 class="text-title"> CONTORNO</h3>
                     <article class="keypad-text" id="textKeypad">
-                        <span class="text-contour-btn" id="noContour">Ninguno</span> 
-                        <span class="text-contour-btn" id="lightContour"> Claro</span> 
-                        <span class="text-contour-btn" id="darkMode"> Oscuro </span>
+                        <span class="text-contour-btn" id="noContour" aria-label="Toque aqui para quitarle el contorno al texto">Ninguno</span> 
+                        <span class="text-contour-btn" id="lightContour" aria-label="Toque aqui para agregarle un contorno blanco al texto"> Claro</span> 
+                        <span class="text-contour-btn" id="darkContour" aria-label="Toque aqui para agregarle un contorno negro al texto"> Oscuro </span>
                     </article>
+                </section>
+                <section class="text-container">
+                    <label for="spacing-font" class="text-title"> ESPACIADO </label>
+                    <input type="number" name="spacing-font" class="font-spacing" id="fontSpacing" value="15" aria-label="Toque aqui para manejar el espaciado  del texto">
+                </section>
+                <section class="text-container">
+                    <h3 class="text-title">interlineado</h3>
+                    <select name="inter-font" id="intFont" class="font-spacing" aria-label="Toque aqui para manejar el interlineado del texto">
+                        <option value="0.8">0.8</option>
+                        <option value="1">1</option>
+                        <option value="1.2" selected>1.2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2">2</option>
+                        <option value="2.5">2.5</option>
+                    </select>
                 </section>
                 
             </form>
         </aside>
         <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->
 
-
-
+        
 
     </main>
     <!-------------------------------------------------------------- End of main container -------------------------------------------------------------->
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="./app.js"></script>
+<script
+     src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" 
+     integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" 
+     crossorigin="anonymous">
+</script>
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.js" 
+    integrity="sha512-B+gr+zLWg81qxVwvtYwKrmjvQtZKD/GGFF7jD80OfzbqFw+NsbS5faEqpCO7Q7oRw1bYi0+WLJf54j8Vm7NADw==" 
+    crossorigin="anonymous">
+</script>
+<script src="./app.js"></script>
 </body>
 </html>

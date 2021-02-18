@@ -94,7 +94,7 @@
 
 .font-size{
     width: 30%;
-    height: 2.4rem;
+    height: 1.7rem;
     background-color: var(--tinputs3);
     border-radius: .3rem;
     padding: .4rem;
@@ -112,13 +112,13 @@
 .fa-align-center,
 .fa-align-right{
 
-    background-color: vaR(--tinputs3);
-    padding: .5rem;
+    background-color: var(--tinputs3);
+    padding: .2rem;
     color: var(--backgrounds);
     border-radius: .3rem;
     text-align: center;
     width: 18%;
-    margin-top: .7rem;
+    
     cursor: pointer;
 }
 
@@ -139,7 +139,7 @@
 .row-color-container2{
     background-color: var(--tinputs3);
     display: inline-flex;
-    padding: .4rem;
+    padding: .2rem;
     border-radius: .3rem;
     color: var(--backgrounds);
     justify-content:space-evenly;
@@ -184,4 +184,32 @@
     border:2px solid var(--buttons) ;
     transition: .7s;
     
+}
+
+/***********************************************************************/
+/********************* CLASSES FOR THE CONTOUR OF THE TEXT ***************/
+/***********************************************************************/
+
+.light-contour{
+    -webkit-text-stroke: 1.5px white;
+}
+
+.dark-contour{
+    -webkit-text-stroke: 3px black;
+}
+
+/***********************************************************************/
+/********************* STYLES FOR THE SPACING AND LINE SPACING  OF THE TEXT *********/
+/***********************************************************************/
+
+.font-spacing{
+    height: 1.3rem;
+    background-color: var(--tinputs3);
+    border: none;
+    padding: .3rem;
+    border-radius: .4rem;
+    width: 100%;
+    text-align: center;
+    font-family: pastika-demo;
+
 }

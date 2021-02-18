@@ -2,6 +2,9 @@
 /////////////////////////////////////////////////////////////////////////////////// VARIABLES //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+const body =document.getElementById ('body')
+const download = document.getElementById ('downloadBtn')
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////  HEADER  //////////////////////////////////////////////
@@ -16,6 +19,7 @@ const imageBtn = document.getElementById ('imageButton'); //Button to open the i
 ///////////////////////////////// CANVAS ////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+const canvas = document.getElementById('canvas')
 const memeTopText= document.getElementById('topText'); // top text of the canvas
 const meme = document.getElementById('imgPart'); //// Image part of the canvas
 const memeBottomText= document.getElementById('bottomText'); // bottom text of the canvas
@@ -60,8 +64,11 @@ const fontColorValue= document.getElementById('fontColorValue') // Name of the t
 const textBackColor =document.getElementById('backFontColor')// Input to change the text part of the meme
 const backColorValue = document.getElementById('backColorValue') // Name of the background color
 const transparentBack =document.getElementById('transparentBack') //input for making the background of our text transparent
-
-
+const noContour = document.getElementById('noContour') // Button for taking off the contour of the text
+const lightContour = document.getElementById('lightContour') // Button for adding white contour to the text
+const darkContour = document.getElementById ('darkContour') // button for Adding black contour to the text
+const fontSpacing =document.getElementById ('fontSpacing') // Button for the spacing of the text 
+const intFont = document.getElementById('intFont') // button for the line spacing of the text
 
 
 
@@ -373,3 +380,103 @@ transparentBack.addEventListener('change', () => {
 })
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE CONTOUR COLOR OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+noContour.addEventListener('click', (e) => {
+    e.preventDefault();
+    memeTopText.classList.remove('light-contour');
+    memeTopText.classList.remove('dark-contour');
+    memeBottomText.classList.remove('light-contour');
+    memeBottomText.classList.remove('dark-contour');
+});
+
+
+lightContour.addEventListener('click',(e)=> {
+    e.preventDefault();
+    memeTopText.classList.add('light-contour')
+    memeBottomText.classList.add('light-contour')
+    memeTopText.classList.remove('dark-contour')
+    memeBottomText.classList.remove('dark-contour')
+})
+
+darkContour.addEventListener('click',(e)=> {
+    e.preventDefault();
+    memeTopText.classList.add('dark-contour')
+    memeBottomText.classList.add('dark-contour')
+    memeTopText.classList.remove('light-contour')
+    memeBottomText.classList.remove('light-contour')
+})
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE FONT SPACING  OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fontSpacing.addEventListener('change', (e) => {
+    memeTopText.style.padding = `${e.target.value}px 15px`;
+    memeBottomText.style.padding = `${e.target.value}px 15px`;
+    memeBottomText.style.marginTop = '0';
+});
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE LINE SPACING  OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+intFont.addEventListener('change', (e) => {
+    memeTopText.style.lineHeight = `${e.target.value}`;
+    memeBottomText.style.lineHeight = `${e.target.value}`;
+    memeBottomText.style.marginTop = '0';
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE DOWNLOAD BUTTON WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const downloadImage = () => {
+    domtoimage.toBlob(canvas)
+        .then(function (blob) {
+            saveAs(blob, 'my-meme.png')
+        })
+}
+
+
+download.addEventListener('click', () => {
+    downloadImage()
+   
+})
+
+
+
+const lightBtn = document.getElementById('lightButton')
+const darkBtn = document. getElementById ('darkButton')
+
+
+darkBtn.addEventListener( 'click', ()  => {
+    darkBtn.style.display='none';
+    lightBtn.style.display='inline';
+    
+})
+
+lightBtn.addEventListener( 'click', ()  => {
+    lightBtn.style.display='none';
+    darkBtn.style.display='inline';
+    body.classList.toggle=('light-mode')
+    
+   
+    
+
+})
+
+
+const closeAside = document.getElementById('closeAside')
+
+
+closeAside.addEventListener ('click' , () => {
+    asideImage.style.display='none';
+    asideText.style.display='none';
+});
