@@ -1,0 +1,187 @@
+.text-container{
+    margin: .4rem;
+}
+
+
+
+
+/***********************************************************************/
+/********************* TITLES *****************************/
+/***********************************************************************/
+
+
+.text-title{
+    font-size: .7em;
+}
+
+.text-subtitle{
+    font-size: .5em;
+    color: var(--buttons);
+}
+
+/***********************************************************************/
+/********************* STYLES FOR THE TEXTAREA************************/
+/***********************************************************************/
+
+
+.text-area{
+    width: 100%;
+    color: var(--backgrounds);
+    background-color: var(--tinputs3);
+    border: none;
+    padding: .3rem;
+    text-align: center;
+    font-family: pastika-demo;
+    font-weight: bolder;
+    margin-top: .3rem;
+    border-radius: .3rem;
+}
+
+/***********************************************************************/
+/********************* STYLES FOR FONT SELECTION ************************/
+/***********************************************************************/
+
+.font-selection{
+    background-color: var(--tinputs3);
+    border-radius: .3rem;
+    padding: .2rem;
+    text-align: center;
+    font-size: .6em;
+    margin-top: .2rem;
+    width: 100%;
+    font-family: pastika-demo;
+}
+
+
+.Sweet-cherry{
+    font-family: sweet-cherry;
+}
+
+
+.murky{
+    font-family: murky;
+}
+
+.mellow-yellow{
+
+    font-family: mellow-yellow;
+}
+
+.macho-weak{
+    font-family: macho-weak;
+}
+
+.how-dare-you{
+    font-family: how-dare-you;
+}
+
+.bella-years{
+    font-family: bella-years;
+}
+
+.pastika-demo{
+    font-family: pastika-demo;
+}
+
+.cosmith-sans{
+    font-family: cosmith-sans;
+}
+
+
+/***********************************************************************/
+/********************* STYLES FOR THE FONT SIZE************************/
+/***********************************************************************/
+
+.font-size{
+    width: 30%;
+    height: 2.4rem;
+    background-color: var(--tinputs3);
+    border-radius: .3rem;
+    padding: .4rem;
+    font-family: pastika-demo;
+    font-size: .7em;
+    text-align: center;
+    border: none;
+}
+
+/***********************************************************************/
+/********************* STYLES FOR THE TEXT ALIGN ************************/
+/***********************************************************************/
+
+.fa-align-left,
+.fa-align-center,
+.fa-align-right{
+
+    background-color: vaR(--tinputs3);
+    padding: .5rem;
+    color: var(--backgrounds);
+    border-radius: .3rem;
+    text-align: center;
+    width: 18%;
+    margin-top: .7rem;
+    cursor: pointer;
+}
+
+
+.fa-align-left:hover,
+.fa-align-center:hover,
+.fa-align-right:hover{
+
+    background-color: var(--tinputs2);
+    transition: 1s;
+}
+
+
+/***********************************************************************/
+/********************* STYLES FOR THE COLOR OF THE TEXT ***************/
+/***********************************************************************/
+
+.row-color-container2{
+    background-color: var(--tinputs3);
+    display: inline-flex;
+    padding: .4rem;
+    border-radius: .3rem;
+    color: var(--backgrounds);
+    justify-content:space-evenly;
+    font-size: .6em;
+    margin: .4rem;
+    width: 40%;
+    
+}
+
+.titles-color-container{
+    display:flex;
+    justify-content:space-evenly;
+}
+
+
+/***********************************************************************/
+/********************* STYLES FOR THE CONTOUR OF THE TEXT ***************/
+/***********************************************************************/
+
+
+.keypad-text{
+    display: inline-block;
+    list-style: none;
+    font-size: .7em;
+    flex-direction: row;
+}
+
+.text-contour-btn{
+    background-color: var(--tbuttons);
+    color: var(--backgrounds);
+    padding: .3rem;
+    margin: .2rem;
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+.text-contour-btn:hover{
+    background-color: var(--backgrounds);
+    color: var(--labels);
+    border:2px solid var(--buttons) ;
+    transition: .7s;
+    
+}

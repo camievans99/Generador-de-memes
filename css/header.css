@@ -1,0 +1,139 @@
+
+/*************************************************************** START OF GENERAL STYLES FOR THE TOP MENU ******************************************************************************/
+
+.principal-menu{
+    background-color: var(--backgrounds);
+    height: auto;
+    padding: 1%;
+    
+}
+/*************************************************************** END OF GENERAL STYLES FOR THE TOP MENU ******************************************************************************/
+
+
+/*************************************************************** START OF  STYLES FOR THE TOP MENU TITLE******************************************************************************/
+
+.principal-title{
+    text-align: center;
+    color: var(--principalTitles);
+    padding: 1%;
+    font-family: cosmith-sans;
+    font-size: 2.6em;
+    padding-top: 1%;
+
+}
+
+
+.principal-title:hover{
+    background: #00F4F2;
+    background: -webkit-radial-gradient(circle farthest-corner at top center, #00F4F2 3%, #64EB9E 16%, #F5B56C 36%, #F491C6 58%, #A7AAF5 77%);
+    background: -moz-radial-gradient(circle farthest-corner at top center, #00F4F2 3%, #64EB9E 16%, #F5B56C 36%, #F491C6 58%, #A7AAF5 77%);
+    background: radial-gradient(circle farthest-corner at top center, #00F4F2 3%, #64EB9E 16%, #F5B56C 36%, #F491C6 58%, #A7AAF5 77%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+/*************************************************************** START OF  STYLES FOR THE KEYPAD OF THE TOP MENU ******************************************************************************/
+
+
+.keypad{
+    text-align: center;
+    
+    
+    
+    
+}
+
+/*************************************************************** END OF STYLES  FOR THE KEYPAD OF THE  TOP MENU ******************************************************************************/
+
+
+/*************************************************************** START OF  STYLES FOR THE BUTTONS OF THE KEYPAD OF THE  TOP MENU ******************************************************************************/
+
+
+.P-menu-button{
+    font-size: 1.2em;
+    font-family: cosmith-sans;
+    background-color: var(--buttons);
+    color: black;
+    border: none;
+    border-radius: .7rem;
+    padding: .2rem 1rem;
+    margin: .2rem ;
+    cursor: pointer;
+}
+
+
+.P-menu-button:hover{
+    transition: 1s;
+    color: var(--secondaryTitles);
+    background-color: var(--backgrounds);
+    border: 1px solid var(--buttons);
+
+
+}
+
+/*************************************************************** END OF  STYLES FOR THE BUTTONS OF THE KEYPAD OF THE  TOP MENU ******************************************************************************/
+
+
+/*************************************************************** start of responsiveness ******************************************************************************/
+
+
+
+/****************************************** SMALL DEVICES **********************************/ 
+@media (min-width: 320px) and (max-width: 476px) {
+    .principal-title {
+        text-align: center;
+        color: var(--principalTitles);
+        padding: .1rem;
+        font-family: cosmith-sans;
+        font-size: 1.2em;
+    }
+
+    .P-menu-button{
+        font-size: .6em;
+        font-family: cosmith-sans;
+        background-color: var(--buttons);
+        color: black;
+        border: none;
+        border-radius: .7rem;
+        padding: .2rem .2rem;
+        cursor: pointer;
+    }
+
+    .principal-menu{
+        background-color: var(--backgrounds);
+        height: auto;
+        padding: .5rem;
+        
+    }
+ }
+
+
+ /****************************************** MEDIUM DEVICES  **********************************/ 
+
+ @media (min-width: 720px) and (max-width: 1024px){
+    .principal-title{
+        text-align: center;
+        color: var(--principalTitles);
+        padding: .2rem;
+        font-family: cosmith-sans;
+        font-size: 3em;
+        padding-top: .3rem;
+    
+    }
+
+    .P-menu-button{
+        font-size: 1.3em;
+        font-family: cosmith-sans;
+        background-color: var(--buttons);
+        color: black;
+        border: none;
+        border-radius: .7rem;
+        padding: .5rem 1rem;
+        margin: .1rem .4rem;
+        cursor: pointer;
+    }
+    
+ }
+
+/*************************************************************** End of responsiveness ******************************************************************************/

@@ -1,0 +1,106 @@
+
+/****************************************** General styles of the DOM  **********************************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: var(--backgroundImage);
+}
+
+/****************************************** ADDING FONTS **********************************/
+
+
+/* PRINCIPAL FONT for titles*/
+@font-face{
+    src: url(../assets/fonts/cosmith.sans.ttf);
+    font-family: cosmith-sans;
+} 
+
+
+/*SECONDARY FONT for subtitles and text*/
+@font-face{
+    src: url(../assets/fonts/pastika-demo.medium.ttf);
+    font-family: pastika-demo;
+}
+
+
+
+/*FONTS for the  font selection part of the text menu*/
+
+@font-face{
+    src: url(../assets/fonts/bella-years.regular.ttf);
+    font-family: bella-years;
+}
+
+
+
+
+@font-face{
+    src: url(../assets/fonts/how-dare-you.regular.ttf);
+    font-family: how-dare-you;
+
+}
+
+
+
+
+@font-face{
+    src: url(../assets/fonts/macho-weak.regular.ttf);
+    font-family: macho-weak;
+}
+
+
+
+
+@font-face{
+    src: url(../assets/fonts/mellow-yellow.regular.ttf);
+    font-family: mellow-yellow;
+}
+
+
+
+
+@font-face{
+    src: url(../assets/fonts/murky.regular.ttf);
+    font-family: murky;
+}
+
+
+
+@font-face{
+    src: url(../assets/fonts/sweet-cherry-free.regular.ttf);
+    font-family: sweet-chery;
+}
+
+
+
+/****************************************** END OF ADDING FONTS **********************************/ 
+
+
+/****************************************** COLOR PALETTES **********************************/ 
+
+
+/***** DARK MODE COLOR PALETTE **********************************/ 
+
+:root{
+    --backgrounds: rgb(24, 24, 24);
+    --tbackgrounds: rgba(24, 24, 24, 0.829);
+    --principalTitles: rgb(0, 244, 242);
+    --tprincipalTitles: rgba(0, 244, 242, 0.733);
+    --labels: rgb(167, 170, 245);
+    --tlabels: rgb(167, 170, 245,0.733);
+    --secondaryTitles: rgb(100, 235, 158);
+    --tsecondaryTitles: rgb(100, 235, 158,0.733);
+    --buttons:rgb(180, 182, 187);
+    --tbuttons:rgb(180, 182, 187,0.733);
+    --inputs2:rgb(244, 145, 198);
+    --tinputs2:rgb(244, 145, 198,0.733);
+    --inputs3:rgb(245, 180, 108);
+    --tinputs3:rgb(245, 180, 108,0.733);
+    --backgroundImage: url(../assets/images/dark-mode-background.png);
+    
+}

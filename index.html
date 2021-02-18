@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!------------ start of meta tags ------------>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------ End of meta tags ------------>
+
+    <!------------ Start of fontawesome link ------------>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+     <!------------ End of fontawesome link ------------>
+
+    <!------------ start of CSS links ------------>
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/canvas.css">
+    <link rel="stylesheet" href="./css/image-menu.css">
+    <link rel="stylesheet" href="./css/text-menu.css">
+    
+    <!------------ End of CSS links  ------------> 
+
+    <!------------ start of favicon Link ------------>
+    
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    
+    <!------------ End of favicon Link ------------>
+
+
+    <title>Generador de memes -by Cami🔮</title>
+</head>
+<body>
+    <!-------------------------------------------------------------- Start of main container -------------------------------------------------------------->
+    
+    <main class="main-container" id="mainContainer"> 
+
+        <!-------------------------------------------------------------- Start of header menu -------------------------------------------------------------->
+        <header class="principal-menu" id="principalMenu"> 
+              
+                <!------------ title of the webapp ------------>
+            
+              <h1 class="principal-title" id="principalTitle"> Generador de memes </h1>
+            
+              <!------------Start of keypad ------------>
+            <section class="keypad" id="keypad">
+                <button class="P-menu-button" id="imageButton" aria-label="Este es un boton para abrir el menu de configuraciones de imagen de nuestro meme"><i class="fas fa-images" aria-hidden="true"></i> IMAGEN </button>
+                <button class="P-menu-button" id="textButton"aria-label="Este es un boton para abrir el menu de configuraciones de texto de nuestro meme"><i class="fas fa-font" aria-hidden="true"></i> TEXTO</button>
+                <button class="P-menu-button" id="lightButton" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp"><i class="fas fa-lightbulb" aria-hidden="true"></i> MODO CLARO </button>
+                <button class="P-menu-button" id="darkButton" style="display: none;" aria-label="Este es un boton para cambiar al modo claro de nuestra webapp" ><i class="far fa-lightbulb" aria-hidden="true"></i> MODO OSCURO  </button>
+            </section>
+            <!------------ End of keypad ------------>
+        </header>
+        <!-------------------------------------------------------------- End of header menu-------------------------------------------------------------->
+
+
+         <!-------------------------------------------------------------- Start of the CANVAS-------------------------------------------------------------->
+
+        <section class="canvas-container">
+            <article class="text-part" id="topText" aria-label="En esta parte se lee el texto superior de nuestro meme"> <span> TOP TEXT </span> </article>
+            <article class="image-part" id="imgPart" aria-label="En esta parte se encontrara la imagen que elijamos para armar nuestro meme"></article>
+            <article class="text-part" id="bottomText" aria-label="En esta parte se lee el texto inferior de nuestro meme"> <span> BOTTOM TEXT</span> </article>
+        </section>
+
+        <!-------------------------------------------------------------- End of the CANVAS-------------------------------------------------------------->
+
+        <!-------------------------------------------------------------- Start of the image menu-------------------------------------------------------------->
+        <aside class="aside-menu" id="imageMenu" style="display: none;"> 
+
+            <!------------ Title------------>
+            <h2 class="main-aside-title" id="asideTitle" > • IMAGEN • </h2>
+
+            <!------------ Form ------------>
+            <form id="imageForm" class="form">
+
+                <!------------ URL ------------>
+                <label for="url" class="form-title"> URL</label>
+                <br>
+                <input type="url" class="url" id="url" aria-label="Coloque aqui la url de la imagen qeud esea usar como meme">
+                <section class="row-section1" id="rowSection">
+
+                    <!------------ color of the image------------>
+                    <label for="color" class="form-title" id="colorInput"> FONDO </label>
+                    <br>
+                    <article class="image-color-container">
+                        <input type="color" class="color-image" id="colorImage" value="#cccccc" aria-label="Aqui puede modificiar el color de la imagen">
+                        <span class="value-color" id="colorValue">#CCCCCC</span>
+                    </article>
+                    <!------------ Options for the color of the image------------>
+                    <select class="color-image-options" id="colorImageOptions" aria-label="Aqui puede seleccionar como se comportara el color de la imagen que elegimos. " >
+                        <option value="none">NINGUNO</option>
+                        <option value="lighten">ACLARAR</option>
+                        <option value="darken">OSCURECER</option>
+                        <option value="difference">DIFERENCIA</option>
+                        <option value="luminosity">LUMINOSIDAD</option>
+                        <option value="multiply">MULTIPLICAR</option>
+                    </select>
+                </section>
+
+                <!------------ filters ------------>
+               
+                <section class="filters-container" id="filtersContainer">
+                    <h3 class="form-title">FILTROS </h3>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="brightness" class="filter-title" >BRILLO</label>
+                            <br>
+                            <input class="range-input" type="range" name="brightness" id="brightness" min="0" max="1" value="1" step="0.1" aria-label="Aqui puede modificar el nivel de brillo de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="opacidad" class="filter-title">OPACIDAD</label>
+                            <br>
+                            <input class="range-input" type="range" name="opacidad" id="opacity" min="0" max="1" value="1" step="0.1" aria-label="Aqui puede modificar el nivel de opacidad de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="contraste" class="filter-title">CONTRASTE</label>
+                            <br>
+                            <input class="range-input" type="range" name="contraste" id="contrast" min="100" max="1000" value="100" aria-label="Aqui puede modificar el nivel de contraste de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label  for="desenfoque" class="filter-title">DESENFOQUE</label>
+                            <br>
+                            <input  class="range-input" type="range" name="desenfoque" id="blur" min="0" max="10" value="0" step="0.1" aria-label="Aqui puede modificar el nivel de desenfoque de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="escala-de-grises" class="filter-title">ESCALA DE GRISES</label>
+                            <br>
+                            <input class="range-input" type="range" name="escala-de-grises" id="grayScale" min="0" max="100" value="0" aria-label="Aqui puede modificar la escala de grises de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="sepia" class="filter-title">SEPIA</label>
+                            <br>
+                            <input class="range-input" type="range" name="sepia" id="sepia" min="0" max="100" value="0" aria-label="Aqui puede aplicar el filtro sepia a la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="hue" class="filter-title">HUE</label>
+                            <br>
+                            <input class="range-input" type="range" name="hue" id="hue" min="0" max="360" value="0" aria-label="Aqui puede modificar el nivel de HUE de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="saturado" class="filter-title">SATURADO</label>
+                            <br>
+                            <input class="range-input" type="range" name="saturado" id="satured" min="100" max="1000" value="100" step="10" aria-label="Aqui puede modificar la saturación  de la imagen ">
+                        </article>
+                        <article class="filters-section" id="filtersSection">
+                            <label for="negativo" class="filter-title">NEGATIVO</label>
+                            <br>
+                            <input class="range-input" type="range" name="negativo" id="negative" min="0" max="1" value="0" step="0.1" aria-label="Aqui puede aplicar el filtro negativo a la imagen">
+                        </article>
+                </section>
+                <button class="reset-button" id="resetButton" aria-label="Con este boton podra reestablecer los filtros de la imagen"> REESTABLECER FILTROS </button>
+            </form>
+        </aside>
+        <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->
+
+         <!-------------------------------------------------------------- Start of the text menu-------------------------------------------------------------->
+         <aside class="aside-menu" id="textMenu" > 
+            <form action="form" id="textForm" class="form">
+
+                 <!------------ title ------------>
+                <h2 class="main-aside-title" id="asideTitle"> • TEXTO • </h2>
+                
+                <!------------ top text part------------>
+                <section class="text-container">
+                    <h3 class="text-title"> SUPERIOR </h3>
+                    <textarea name="area-text" id="topAreatext" class="text-area" placeholder="TOP TEXT" aria-label="Aqui puedes escribir lo que quieres que vaya en la parte de arriba de tu meme "></textarea>
+                    <input type="checkbox" name="top-text" id="eraseTopText" class="checkbox">
+                    <label for="top-text" class="text-subtitle">Sin texto superior</label>
+                </section>
+
+                <!------------ bottom text part------------>
+                <section class="text-container">
+                    <h3 class="text-title"> INFERIOR </h3>
+                    <textarea name="area-text" id="bottomAreatext" class="text-area" placeholder="BOTTOM TEXT" aria-label="Aqui puedes escribir lo que quieres que vaya en la parte de arriba de tu meme "></textarea>
+                    <input type="checkbox" name="bottom-text" id="eraseBottomText" class="checkbox">
+                    <label for="bottom-text" class="text-subtitle">Sin texto inferior </label>
+                </section>
+
+                <!------------ fonts part------------>
+                <section class="text-container">
+
+                    <!------------ fonts selection------------>
+                    <h3 class="text-title"> FUENTES </h3>
+                    <select name="font" id="fontSelector" class="font-selection">
+                        <option value="bella-years" class="bella-years">Bella years</option>
+                        <option value="cosmith-sans" class="cosmith-sans">cosmith sans</option>
+                        <option value="how-dare-you" class="how-dare-you">How dare you</option>
+                        <option value="pastika-demo" selected class="pastika-demo">Pastika demo</option>
+                        <option value="macho-weaak" class="macho-weaak">Macho weak</option>
+                        <option value="mellow-yellow"  class="mellow-yellow">Mellow yellow</option>
+                        <option value="murky" class="murky">Murky</option>
+                        <option value="sweet-cherry"  class="Sweet-cherry">Sweet cherry</option>
+                    </select>
+                </section>
+                <!------------ fonts size----------->
+                <section class="text-container">
+                    <input type="number" name="font-size" id="fontSize" class="font-size" value="30" max="80">
+
+                    <!------------ text align ----------->
+                    <i class="fas fa-align-left" aria-hidden="true" id="alignLeft"></i>
+                    <i class="fas fa-align-center" aria-hidden="true" id="alignCenter"></i>
+                    <i class="fas fa-align-right" aria-hidden="true" id="alignRight"></i>
+                </section>
+                    <!------------ text color ------------>
+                <section class="text-container">
+                    <article class="titles-color-container">
+                        <label for="font-color" class="text-title"> COLOR </label> 
+                        <label for="background-color" class="text-title"> FONDO</label>
+
+                    </article>
+                    
+                    <article class="color-container"> 
+                        <div class="row-color-container2">
+                            <input type="color" name="font-color" id="fontColor" value="#CCCCCC" aria-label="Aqui puede cambiar el color de fuente de su meme "> 
+                        </div>
+                        <div class="row-color-container2">
+                            <input type="color" class="background-color" id="backFontColor"  value="#CCCCCC" aria-label="Aqui puede cambiar el color de fondo de la aprte de texto de su meme"> 
+                        </div>
+                        <br>
+                        <!------------ transparent backgrounds ------------>
+                        <input type="checkbox" id="transparentBack" class="checkbox" >
+                        <span class="text-subtitle" > Fondo transparente  </span>
+                    </article>  
+                </section>
+                <!------------ text contour ------------>
+                <section class="text-container">
+                    <h3 class="text-title"> CONTORNO</h3>
+                    <article class="keypad-text" id="textKeypad">
+                        <span class="text-contour-btn" id="noContour">Ninguno</span> 
+                        <span class="text-contour-btn" id="lightContour"> Claro</span> 
+                        <span class="text-contour-btn" id="darkMode"> Oscuro </span>
+                    </article>
+                </section>
+                
+            </form>
+        </aside>
+        <!-------------------------------------------------------------- End of the image menu-------------------------------------------------------------->
+
+
+
+
+    </main>
+    <!-------------------------------------------------------------- End of main container -------------------------------------------------------------->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

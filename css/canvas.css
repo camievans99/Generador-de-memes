@@ -1,0 +1,79 @@
+
+/****************************************** GENERAL STYLES FOR THE CANVAS SECTION **********************************/ 
+
+
+.canvas-container{
+    text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba( 24, 24, 24, 0.65 );
+    backdrop-filter: blur( 20.0px );
+    -webkit-backdrop-filter: blur( 20.0px );
+    height: 21rem;
+    margin-top: 1%;
+    }
+
+/****************************************** END OF GENERAL STYLES FOR THE CANVAS SECTION **********************************/ 
+
+/****************************************** STYLES FOR THE TOP AN BOTTOM TEXT CANVAS SECTION **********************************/ 
+
+.text-part{
+    background-color: var(--backgrounds);
+    height: 4rem;
+    color: var(--secondaryTitles);
+    font-family: pastika-demo;
+    padding: .5rem;
+    font-size: 1.5rem;
+}
+
+/****************************************** END OF STYLES FOR THE TOP AND BOTTOM OF  TEXT CANVAS SECTION **********************************/ 
+
+
+
+/****************************************** STYLES FOR THE IMAGE CONTAINER OF THE  CANVAS SECTION **********************************/ 
+
+.image-part{
+    
+    height: 16rem;
+}
+
+
+/****************************************** END OF STYLES FOR THE IMAGE CONTAINER OF THE  CANVAS SECTION **********************************/ 
+
+
+/****************************************** START OF RESPONSIVENESS **********************************/ 
+
+
+/****************************************** SMALL AND MEDIUM  DEVICES **********************************/ 
+@media (min-width: 320px) and (max-width: 1024px){
+    
+.canvas-container{
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .text-part{
+        background-color: var(--backgrounds);
+        height: 4rem;
+        color: var(--secondaryTitles);
+        font-family: pastika-demo;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    
+    .image-part{
+        background-color: var(--tbackgrounds);
+        height: 31.3rem;
+    }
+
+
+
+}
+
+ 
+
+/****************************************** END OF RESPONSIVENESS**********************************/ 
