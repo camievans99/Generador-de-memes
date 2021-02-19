@@ -12,7 +12,7 @@ Pueden visitar mi proyecto deployado en github pages en [este enlace](https://ca
 
 
 MODO OSCURO
-![Imagen](https://github.com/camievans99/Generador-de-memes/blob/main/assets/images/screenShotLightMode.png?raw=true)
+![Imagen](https://github.com/camievans99/Generador-de-memes/blob/main/assets/images/screenshotDarkmode.png?raw=true)
 
 
 
