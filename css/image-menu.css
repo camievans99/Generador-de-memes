@@ -8,17 +8,40 @@
 /********************* ASIDE MENU**************************************/
 /***********************************************************************/
 
+.fa-times-circle{
+  color: var(--principalTitles);
+  cursor: pointer;
+}
+
+
+
+.dark-mode .fa-times-circle{
+  color: var(--dmprincipalTitles);
+}
 
 .aside-menu{
     top: 0;
     right: 0;
     position: fixed;
     float: right;
-    height: 100vh;
+    height: 100%;
     background-color: var(--backgrounds);
     width: 20vw;
-    padding: 1rem ;
+    padding: .3rem ;
     font-family: pastika-demo;
+}
+
+.responsive .aside-menu{
+  width: 100%;
+  display: none;
+}
+
+
+
+
+.dark-mode .aside-menu{
+  background-color: var(--dmbackgrounds);
+
 }
 
 
@@ -29,27 +52,42 @@
 
 .main-aside-title{
     color: var(--secondaryTitles);
-    font-size: 3em;
+    font-size: 1.2em;
     text-align: center;
 
 }
 
+.lightmode .main-aside-title{
+  color: var(--secondaryTitles);
 
+}
+
+.dark-mode .main-aside-title{
+  color: var(--dmsecondaryTitles);
+}
 /***********************************************************************/
 /********************* FORMULARY CONTAINER *****************************/
 /***********************************************************************/
 
 .form{
-    margin: 1rem;
-    font-size: 1.7em;
+    
+    font-size: 1.2em;
     color: var(--labels);
 
 }
 
+.lightmode .form{
+  color: var(--labels);
+}
+
+.dark-mode .form{
+  color: var(--dmlabels);
+}
+
 .form-title{
-    font-size: 1em;
+    font-size: .6em;
     font-weight: normal;
-    margin: .5rem 0rem;
+    ;
 }
 
 
@@ -69,8 +107,8 @@
 /***********************************************************************/
 
 .url{
-    height: 1.7rem;
-    width: 90%;
+    height: 1rem;
+    width: 100%;
     padding: 0.3rem;
     background-color: var(--tinputs2);
     border: none;
@@ -78,14 +116,13 @@
 
 }
 
-/***********************************************************************/
-/********************* SECTION OF CHANGES OF COLOR FOR THE IMAGE *********/
-/***********************************************************************/
 
+.lightmode .url{
+  background-color: var(--tinputs2);
+}
 
-.row-section1,
-.filter-section{
-    margin-top: 1rem;
+.dark-mode .url{
+  background-color: var(--dmtinputs2);
 }
 
 /***********************************************************************/
@@ -96,10 +133,17 @@
 .image-color-container{
     background-color: var(--tinputs2);
     display: inline-block;
-    padding: .3rem;
+    padding: .1rem;
     border-radius: .3rem;
     color: var(--backgrounds);
+    font-size: .4em;
 }
+
+
+.dark-mode .image-color-container{
+  background-color: var(--dmtinputs2);
+}
+
 
 /***********************************************************************/
 /********************* OPTIONS FOR THE COLOR IMAGE (SELECT) *******************/
@@ -108,18 +152,30 @@
       
 .color-image-options{
     background-color: var(--tinputs2);
-    height: 2.4rem;
+    height: 1.2rem;
     padding: .3rem;
     border-radius: .3rem;
     border: none;
     font-family: pastika-demo;
-    font-size: .6em;
+    font-size: .5em;
+    width: 50%;
 
+}
+
+.dark-mode .color-image-options{
+  background-color: var(--dmtinputs2);
+  color: var(--dmprincipalTitles);
 }
 
 /***********************************************************************/
 /********************* FILTERS SECTION *****************************/
 /***********************************************************************/
+
+.filters-section{
+  height: 2.4rem;
+  padding: .2rem;
+  
+}
 
 
 /***********************************************************************/
@@ -132,6 +188,10 @@
     color: var(--tlabels);
 }
 
+.dark-mode .filter-title{
+  color: var(--dmtlabels);
+}
+
 
 /***********************************************************************/
 /********************* RANGE INPUT STYLES *****************************/
@@ -140,7 +200,6 @@
 
 .range-input {
     -webkit-appearance: none;
-    margin: 18px 0;
     width: 100%;
   }
   .range-input:focus {
@@ -148,24 +207,40 @@
   }
   .range-input::-webkit-slider-runnable-track {
     width: 90%;
-    height: .4rem;
+    height: .2rem;
     cursor: pointer;
     background: var(--inputs3);
     border-radius: .3rem;
-    border:none;
+    
+    
   }
+
+  .dark-mode.range-input::-webkit-slider-runnable-track{
+    background: var(--dminputs3);
+  }
+
   .range-input::-webkit-slider-thumb {
     border: none;
-    height: 1.3rem;
-    width: 1.3rem;
-    border-radius: 1rem;
+    height: .5rem;
+    width: .5rem;
+    border-radius: .5rem;
     background: var(--inputs2);
     cursor: pointer;
     -webkit-appearance: none;
-    margin-top: -.5rem;
+    margin-top: -.2rem;
   }
+
+  .dark-mode .range-input::-webkit-slider-thumb{
+    background: var(--dminputs2);
+  }
+
+
   .range-input:focus::-webkit-slider-runnable-track {
     background: var(--tinputs3);
+  }
+
+  .dark-mode .range-input:focus::-webkit-slider-runnable-track{
+    background: var(--dmtinputs3);
   }
 
 /***********************************************************************/
@@ -183,9 +258,9 @@
   }
   .range-input::-moz-range-thumb {
     border: none;
-    height: 1.3rem;
-    width: 1.3rem;
-    border-radius: 1rem;
+    height: .4rem;
+    width: .4rem;
+    border-radius: .4rem;
     background: var(--inputs2);
     cursor: pointer;
     -webkit-appearance: none;
@@ -195,13 +270,19 @@
   .reset-button{
       background-color: var(--tbuttons);
       color: var(--backgrounds);
-      font-size: .7em;
+      font-size: .5em;
       text-align: center;
       border: none;
       border-radius: .4rem;
-      padding: .4rem;  
+      padding: .3rem;  
       font-family: pastika-demo;
       cursor: pointer;
+      margin-top: .4rem;
+}
+
+.dark-mode .reset-button{
+  background-color: var(--dmtbuttons);
+  color: var(--dmbackgrounds);
 }
 
 .reset-button:hover{
@@ -211,4 +292,28 @@
     transition: 1.5s;
     
 }
+
+.dark-mode .reset-button:hover{
+  color: var(--dmsecondaryTitles);
+  background-color: var(--dmbackgrounds);
+  border:  1px solid var(--dmbuttons);
+}
     
+
+@media (min-width: 320px) and (max-width: 1024px){
+  .aside-menu{
+    display: none;
+    width: 100%;
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px){
+  .fa-times-circle{
+    display: none;
+  }
+
+  .close-responsive-aside{
+    display: none;
+  }
+}

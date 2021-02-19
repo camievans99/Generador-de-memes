@@ -11,12 +11,16 @@
 
 
 .text-title{
-    font-size: 1em;
+    font-size: .7em;
 }
 
 .text-subtitle{
-    font-size: .9em;
+    font-size: .5em;
     color: var(--buttons);
+}
+
+.dark-mode .text-subtitle{
+    color: var(--dmbuttons);
 }
 
 /***********************************************************************/
@@ -29,26 +33,37 @@
     color: var(--backgrounds);
     background-color: var(--tinputs3);
     border: none;
-    padding: 1rem;
+    padding: .3rem;
     text-align: center;
     font-family: pastika-demo;
     font-weight: bolder;
-    margin-top: .7rem;
+    margin-top: .3rem;
     border-radius: .3rem;
 }
 
+.dark-mode .text-area{
+    color: var(--dmbackgrounds);
+    background-color: var(--dmtinputs3);
+}
+
 /***********************************************************************/
-/********************* STYLES FOR FONT SELECTION************************/
+/********************* STYLES FOR FONT SELECTION ************************/
 /***********************************************************************/
 
 .font-selection{
     background-color: var(--tinputs3);
     border-radius: .3rem;
-    padding: .4rem;
+    padding: .2rem;
     text-align: center;
-    font-size: .8em;
-    margin-top: .4rem;
+    font-size: .6em;
+    margin-top: .2rem;
     width: 100%;
+    font-family: pastika-demo;
+}
+
+.dark-mode .font-selection{
+    background: var(--dmtinputs3);
+    color: var(--dmprincipalTitles);
 }
 
 
@@ -92,14 +107,20 @@
 /***********************************************************************/
 
 .font-size{
-    width: 40%;
-    height: 3rem;
+    width: 30%;
+    height: 1.7rem;
     background-color: var(--tinputs3);
     border-radius: .3rem;
     padding: .4rem;
     font-family: pastika-demo;
-    font-size: 1em;
+    font-size: .7em;
     text-align: center;
+    border: none;
+}
+
+.dark-mode .font-size{
+    background-color: var(--dmtinputs3);
+    color: var(--dmprincipalTitles);
 }
 
 /***********************************************************************/
@@ -110,14 +131,28 @@
 .fa-align-center,
 .fa-align-right{
 
-    background-color: vaR(--tinputs3);
-    padding: .5rem;
+    background-color: var(--tinputs3);
+    padding: .2rem;
     color: var(--backgrounds);
     border-radius: .3rem;
     text-align: center;
     width: 18%;
-    margin-top: .7rem;
+    
     cursor: pointer;
+}
+
+.dark-mode .fa-align-left,
+.dark-mode .fa-align-center,
+.dark-mode .fa-align-right{
+    background-color: var(--dmtinputs3);
+    color: var(--dmprincipalTitles);
+}
+
+
+.dark-mode .fa-align-left:hover,
+.dark-mode .fa-align-center:hover,
+.dark-mode .fa-align-right:hover{
+    background-color: var(--dmtinputs2);
 }
 
 
@@ -137,13 +172,18 @@
 .row-color-container2{
     background-color: var(--tinputs3);
     display: inline-flex;
-    padding: .4rem;
+    padding: .2rem;
     border-radius: .3rem;
     color: var(--backgrounds);
     justify-content:space-evenly;
     font-size: .6em;
     margin: .4rem;
+    width: 40%;
     
+}
+.dark-mode .row-color-container2{
+    background-color: var(--dmtinputs3);
+    color: var(--dmbackgrounds);
 }
 
 .titles-color-container{
@@ -152,5 +192,77 @@
 }
 
 
+/***********************************************************************/
+/********************* STYLES FOR THE CONTOUR OF THE TEXT ***************/
+/***********************************************************************/
 
 
+.keypad-text{
+    display: inline-block;
+    list-style: none;
+    font-size: .7em;
+    flex-direction: row;
+}
+
+.text-contour-btn{
+    background-color: var(--tbuttons);
+    color: var(--backgrounds);
+    padding: .3rem;
+    margin: .2rem;
+    border-radius: .3rem;
+    border: none;
+    cursor: pointer;
+
+}
+
+.dark-mode .text-contour-btn{
+    background-color: var(--dmtbuttons);
+    color: var(--dmprincipalTitles);
+}
+
+.dark-mode .text-contour-btn:hover{
+    background-color: var(--dmbackgrounds);
+    color: var(--dmlabels);
+    border: none;
+}
+
+.text-contour-btn:hover{
+    background-color: var(--backgrounds);
+    color: var(--labels);
+    border:2px solid var(--buttons) ;
+    transition: .7s;
+    
+}
+
+/***********************************************************************/
+/********************* CLASSES FOR THE CONTOUR OF THE TEXT ***************/
+/***********************************************************************/
+
+.light-contour{
+    -webkit-text-stroke: 1.5px white;
+}
+
+.dark-contour{
+    -webkit-text-stroke: 3px black;
+}
+
+/***********************************************************************/
+/********************* STYLES FOR THE SPACING AND LINE SPACING  OF THE TEXT *********/
+/***********************************************************************/
+
+.font-spacing{
+    height: 1.3rem;
+    background-color: var(--tinputs3);
+    border: none;
+    padding: .3rem;
+    border-radius: .4rem;
+    width: 100%;
+    text-align: center;
+    font-family: pastika-demo;
+
+}
+
+.dark-mode .font-spacing{
+    background-color: var(--dmtinputs3);
+    color: var(--dmprincipalTitles);
+}

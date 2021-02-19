@@ -4,8 +4,13 @@
 .principal-menu{
     background-color: var(--backgrounds);
     height: auto;
-    padding: 2rem;
+    padding: 1%;
     
+}
+
+
+.dark-mode .principal-menu{
+    background-color: var(--dmbackgrounds);
 }
 /*************************************************************** END OF GENERAL STYLES FOR THE TOP MENU ******************************************************************************/
 
@@ -15,33 +20,40 @@
 .principal-title{
     text-align: center;
     color: var(--principalTitles);
-    padding: .4rem;
+    padding: 1%;
     font-family: cosmith-sans;
-    font-size: 4em;
-    padding-top: .8rem;
+    font-size: 2.6em;
+    padding-top: 1%;
 
+}
+
+
+
+.dark-mode .principal-title{
+    color: var(--dmprincipalTitles);
 }
 
 
 .principal-title:hover{
-    background: #00F4F2;
-    background: -webkit-radial-gradient(circle farthest-corner at top center, #00F4F2 3%, #64EB9E 16%, #F5B56C 36%, #F491C6 58%, #A7AAF5 77%);
-    background: -moz-radial-gradient(circle farthest-corner at top center, #00F4F2 3%, #64EB9E 16%, #F5B56C 36%, #F491C6 58%, #A7AAF5 77%);
-    background: radial-gradient(circle farthest-corner at top center, #00F4F2 3%, #64EB9E 16%, #F5B56C 36%, #F491C6 58%, #A7AAF5 77%);
+    background: #FA26A0;
+    background: -webkit-linear-gradient(to right, #FA26A0 0%, #26DFD0 8%, #E965B2 29%, #07BB9C 50%, #E56997 67%, #BD97CB 100%);
+    background: -moz-linear-gradient(to right, #FA26A0 0%, #26DFD0 8%, #E965B2 29%, #07BB9C 50%, #E56997 67%, #BD97CB 100%);
+    background: linear-gradient(to right, #FA26A0 0%, #26DFD0 8%, #E965B2 29%, #07BB9C 50%, #E56997 67%, #BD97CB 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     
 }
+
+
+
 
 /*************************************************************** START OF  STYLES FOR THE KEYPAD OF THE TOP MENU ******************************************************************************/
 
 
 .keypad{
     text-align: center;
-    margin-top: .6rem;
-    
-    
-    
 }
 
 /*************************************************************** END OF STYLES  FOR THE KEYPAD OF THE  TOP MENU ******************************************************************************/
@@ -51,17 +63,23 @@
 
 
 .P-menu-button{
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-family: cosmith-sans;
     background-color: var(--buttons);
     color: black;
     border: none;
     border-radius: .7rem;
-    padding: .5rem 1rem;
-    margin: .2rem .4rem;
+    padding: .2rem 1rem;
+    margin: .2rem ;
     cursor: pointer;
 }
 
+
+
+.dark-mode .P-menu-button{
+    background-color: var(--dmbuttons);
+    color: var(--dmbackgrounds);
+}
 
 .P-menu-button:hover{
     transition: 1s;
@@ -72,6 +90,13 @@
 
 }
 
+
+.dark-mode .P-menu-button:hover {
+    color: var(--dmsecondaryTitles);
+    background-color: var(--dmtbackgrounds);
+    border:  1px solid var(--dmbuttons);
+}
+
 /*************************************************************** END OF  STYLES FOR THE BUTTONS OF THE KEYPAD OF THE  TOP MENU ******************************************************************************/
 
 
@@ -80,7 +105,7 @@
 
 
 /****************************************** SMALL DEVICES **********************************/ 
-@media (min-width: 320px) and (max-width: 476px) {
+@media (min-width: 320px) and (max-width: 720px) {
     .principal-title {
         text-align: center;
         color: var(--principalTitles);
@@ -90,7 +115,7 @@
     }
 
     .P-menu-button{
-        font-size: .6em;
+        font-size: .5em;
         font-family: cosmith-sans;
         background-color: var(--buttons);
         color: black;
@@ -117,13 +142,13 @@
         color: var(--principalTitles);
         padding: .2rem;
         font-family: cosmith-sans;
-        font-size: 3em;
+        font-size: 2em;
         padding-top: .3rem;
     
     }
 
     .P-menu-button{
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-family: cosmith-sans;
         background-color: var(--buttons);
         color: black;
@@ -137,3 +162,4 @@
  }
 
 /*************************************************************** End of responsiveness ******************************************************************************/
+

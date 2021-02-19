@@ -2,6 +2,13 @@
 /////////////////////////////////////////////////////////////////////////////////// VARIABLES //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////  DOM //////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////
+
+const body =document.getElementById ('body');
+const download = document.getElementById ('downloadBtn');
+const closeResponsive =document.getElementById('closeResponsive')
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////  HEADER  //////////////////////////////////////////////
@@ -9,6 +16,8 @@
 
 const textBtn  = document.getElementById('textButton'); // Button to open the text configurations menu
 const imageBtn = document.getElementById ('imageButton'); //Button to open the image configurations menu. 
+const lightBtn = document.getElementById('lightButton'); //Button for change to light mode
+const darkBtn = document. getElementById ('darkButton'); // button for change to dark mode
 
 
 
@@ -16,6 +25,7 @@ const imageBtn = document.getElementById ('imageButton'); //Button to open the i
 ///////////////////////////////// CANVAS ////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+const canvas = document.getElementById('canvas'); // Container of the canvas
 const memeTopText= document.getElementById('topText'); // top text of the canvas
 const meme = document.getElementById('imgPart'); //// Image part of the canvas
 const memeBottomText= document.getElementById('bottomText'); // bottom text of the canvas
@@ -54,14 +64,17 @@ const fontSelection = document.getElementById ('fontSelector'); // select tag th
 const fontSize = document.getElementById('fontSize'); //Input to change the size of the meme fonts
 const alignLeft= document.getElementById('alignLeft');// button that align the text to the left
 const alignCenter=document.getElementById('alignCenter');// center the text of the meme
-const alignRight= document.getElementById('alignRight') //Button that aligns text to the right
-const fontColor =document.getElementById('fontColor')// Input to change the color of the text 
-const fontColorValue= document.getElementById('fontColorValue') // Name of the text color
-const textBackColor =document.getElementById('backFontColor')// Input to change the text part of the meme
-const backColorValue = document.getElementById('backColorValue') // Name of the background color
-const transparentBack =document.getElementById('transparentBack') //input for making the background of our text transparent
-
-
+const alignRight= document.getElementById('alignRight'); //Button that aligns text to the right
+const fontColor =document.getElementById('fontColor');  // Input to change the color of the text 
+const fontColorValue= document.getElementById('fontColorValue'); // Name of the text color
+const textBackColor =document.getElementById('backFontColor'); // Input to change the text part of the meme
+const backColorValue = document.getElementById('backColorValue'); // Name of the background color
+const transparentBack =document.getElementById('transparentBack'); //input for making the background of our text transparent
+const noContour = document.getElementById('noContour'); // Button for taking off the contour of the text
+const lightContour = document.getElementById('lightContour'); // Button for adding white contour to the text
+const darkContour = document.getElementById ('darkContour'); // button for Adding black contour to the text
+const fontSpacing =document.getElementById ('fontSpacing'); // Button for the spacing of the text 
+const intFont = document.getElementById('intFont'); // button for the line spacing of the text
 
 
 
@@ -86,6 +99,7 @@ const transparentBack =document.getElementById('transparentBack') //input for ma
 textBtn.addEventListener('click', () =>{
     asideImage.style.display = 'none';
     asideText.style.display= 'block';
+    
 });
 
 
@@ -96,6 +110,7 @@ textBtn.addEventListener('click', () =>{
 imageBtn.addEventListener('click',() => {
     asideImage.style.display='block';
     asideText.style.display='none';
+    
 });
 
 
@@ -239,9 +254,9 @@ BottomtextArea.addEventListener('keydown',(e) => {
 
 eraseBottomText.addEventListener('change',()=> {
     if(eraseBottomText.checked === true){
-        memeBottomText.style.display= 'none'
+        memeBottomText.style.display= 'none';
     } else {
-        memeBottomText.style.display= 'block'
+        memeBottomText.style.display= 'block';
     }
 });
 
@@ -274,8 +289,8 @@ fontSelection.addEventListener('change', (e) => {
         memeTopText.style.fontFamily = `murky`;
         memeBottomText.style.fontFamily = `murky`;
     } else if(fontValue=== 'sweet-cherry'){
-        memeTopText.style.fontFamily='sweet-chery'
-        memeBottomText.style.fontFamily='sweet-chery'
+        memeTopText.style.fontFamily='sweet-chery';
+        memeBottomText.style.fontFamily='sweet-chery';
     }
       else {
         memeTopText.style.fontFamily = `pastika-demo`;
@@ -314,7 +329,7 @@ alignLeft.addEventListener('click', () => {
 
 alignCenter.addEventListener('click', () => {
     memeTopText.style.textAlign='center';
-    memeBottomText.style.textAlign='center'
+    memeBottomText.style.textAlign='center';
 })
 
 
@@ -325,8 +340,8 @@ alignCenter.addEventListener('click', () => {
 
 
 alignRight.addEventListener('click', () => {
-    memeTopText.style.textAlign= 'right'
-    memeBottomText.style.textAlign='right'
+    memeTopText.style.textAlign= 'right';
+    memeBottomText.style.textAlign='right';
 })
 
 
@@ -355,13 +370,16 @@ textBackColor.addEventListener('input', (e) => {
 
 
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE TRANSPARENT BACKGROUND COLOR OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 transparentBack.addEventListener('change', () => {
     if (transparentBack.checked) {
         memeTopText.style.backgroundColor = 'transparent';
-        memeTopText.style.zIndex='2'
+        memeTopText.style.zIndex='2';
         memeBottomText.style.backgroundColor = 'transparent';
+        memeBottomText.style.marginTop='-23px';
         
     } else {
         memeTopText.style.backgroundColor = 'black';
@@ -370,3 +388,113 @@ transparentBack.addEventListener('change', () => {
 })
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE CONTOUR COLOR OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+noContour.addEventListener('click', (e) => {
+    e.preventDefault();
+    memeTopText.classList.remove('light-contour');
+    memeTopText.classList.remove('dark-contour');
+    memeBottomText.classList.remove('light-contour');
+    memeBottomText.classList.remove('dark-contour');
+});
+
+
+lightContour.addEventListener('click',(e)=> {
+    e.preventDefault();
+    memeTopText.classList.add('light-contour');
+    memeBottomText.classList.add('light-contour');
+    memeTopText.classList.remove('dark-contour');
+    memeBottomText.classList.remove('dark-contour');
+})
+
+darkContour.addEventListener('click',(e)=> {
+    e.preventDefault();
+    memeTopText.classList.add('dark-contour');
+    memeBottomText.classList.add('dark-contour');
+    memeTopText.classList.remove('light-contour');
+    memeBottomText.classList.remove('light-contour');
+})
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE FONT SPACING  OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+fontSpacing.addEventListener('change', (e) => {
+    memeTopText.style.padding = `${e.target.value}px 15px`;
+    memeBottomText.style.padding = `${e.target.value}px 15px`;
+    memeBottomText.style.marginTop = '0';
+});
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE LINE SPACING  OF THE TEXT WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+intFont.addEventListener('change', (e) => {
+    memeTopText.style.lineHeight = `${e.target.value}`;
+    memeBottomText.style.lineHeight = `${e.target.value}`;
+    memeBottomText.style.marginTop = '0';
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE DOWNLOAD BUTTON WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+const downloadImage = () => {
+    domtoimage.toBlob(canvas)
+        .then(function (blob) {
+            saveAs(blob, 'my-meme.png');
+        });
+};
+
+
+download.addEventListener('click', () => {
+    downloadImage();
+    canvas.style.width= '70%'
+   
+});
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE DARKMODE WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+darkBtn.addEventListener( 'click', ()  => {
+    darkBtn.style.display='none';
+    lightBtn.style.display='inline';
+    body.classList.toggle('dark-mode');
+    body.style.backgroundImage= 'none';
+    body.style.backgroundColor ='#2d00f5cc';
+    
+
+    
+});
+
+lightBtn.addEventListener( 'click', ()  => {
+    lightBtn.style.display='none';
+    darkBtn.style.display='inline';
+    body.classList.remove('dark-mode');
+    body.style.backgroundColor= '#26DFD0cc';
+    
+   
+    
+
+});
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////   MAKING THE RESPONSIVE MENU WORK//////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function closeNav() {
+    asideImage.style.display = 'none';
+    asideText.style.display = 'none'
+  }
